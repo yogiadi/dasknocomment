@@ -1,0 +1,5422 @@
+
+dask/versioneer.py
+
+---- Class: VersioneerConfig
+---- Func: get_root
+---- Func: get_config_from_root
+-------- Func: get
+---- Class: NotThisMethod
+---- Func: register_vcs_handler
+-------- Func: decorate
+---- Func: run_command
+---- Func: git_get_keywords
+---- Func: git_versions_from_keywords
+---- Func: git_pieces_from_vcs
+---- Func: do_vcs_install
+---- Func: versions_from_parentdir
+---- Func: versions_from_file
+---- Func: write_to_version_file
+---- Func: plus_or_dot
+---- Func: render_pep440
+---- Func: render_pep440_pre
+---- Func: render_pep440_post
+---- Func: render_pep440_old
+---- Func: render_git_describe
+---- Func: render_git_describe_long
+---- Func: render
+---- Class: VersioneerBadRootError
+---- Func: get_versions
+---- Func: get_version
+---- Func: get_cmdclass
+-------- Class: cmd_version
+------------ Func: initialize_options
+------------ Func: finalize_options
+------------ Func: run
+-------- Class: cmd_build_py
+------------ Func: run
+-------- Class: cmd_build_exe
+------------ Func: run
+-------- Class: cmd_sdist
+------------ Func: run
+------------ Func: make_release_tree
+---- Func: do_setup
+---- Func: scan_setup_py
+
+dask/setup.py
+
+
+dask/conftest.py
+
+---- Func: pytest_addoption
+---- Func: pytest_runtest_setup
+
+dask/dask/utils_test.py
+
+---- Func: inc
+---- Func: dec
+---- Func: add
+---- Class: GetFunctionTestMixin
+-------- Func: test_get
+-------- Func: test_badkey
+-------- Func: test_nested_badkey
+-------- Func: test_data_not_in_dict_is_ok
+-------- Func: test_get_with_list
+-------- Func: test_get_with_list_top_level
+-------- Func: test_get_with_nested_list
+-------- Func: test_get_works_with_unhashables_in_values
+-------- Func: test_nested_tasks
+-------- Func: test_get_stack_limit
+-------- Func: test_with_HighLevelGraph
+
+dask/dask/system.py
+
+---- Func: cpu_count
+
+dask/dask/base.py
+
+---- Func: is_dask_collection
+---- Class: DaskMethodsMixin
+-------- Func: visualize
+-------- Func: persist
+-------- Func: compute
+-------- Func: __await__
+------------ Func: f
+---- Func: compute_as_if_collection
+---- Func: dont_optimize
+---- Func: optimization_function
+---- Func: collections_to_dsk
+---- Func: _extract_graph_and_keys
+---- Func: unpack_collections
+-------- Func: _unpack
+-------- Func: repack
+---- Func: optimize
+---- Func: compute
+---- Func: visualize
+---- Func: persist
+---- Func: tokenize
+---- Func: normalize_dict
+---- Func: normalize_ordered_dict
+---- Func: normalize_set
+---- Func: normalize_seq
+---- Func: normalize_object
+---- Func: normalize_function
+---- Func: _normalize_function
+---- Func: register_pandas
+-------- Func: normalize_index
+-------- Func: normalize_categorical
+-------- Func: normalize_series
+-------- Func: normalize_dataframe
+---- Func: register_numpy
+-------- Func: normalize_array
+-------- Func: normalize_matrix
+-------- Func: normalize_ufunc
+---- Func: register_scipy
+-------- Func: normalize_sparse_matrix
+-------- Func: normalize_dok_matrix
+---- Func: _colorize
+---- Func: get_scheduler
+---- Func: wait
+
+dask/dask/callbacks.py
+
+---- Class: Callback
+-------- Func: __init__
+-------- Func: _callback
+-------- Func: __enter__
+-------- Func: __exit__
+-------- Func: register
+-------- Func: unregister
+---- Func: unpack_callbacks
+---- Func: local_callbacks
+---- Func: normalize_callback
+---- Class: add_callbacks
+-------- Func: __init__
+-------- Func: __enter__
+-------- Func: __exit__
+
+dask/dask/rewrite.py
+
+---- Func: head
+---- Func: args
+---- Class: Traverser
+-------- Func: __init__
+-------- Func: __iter__
+-------- Func: copy
+-------- Func: next
+-------- Func: current
+-------- Func: skip
+---- Class: Token
+-------- Func: __init__
+-------- Func: __repr__
+---- Class: Node
+-------- Func: __new__
+-------- Func: edges
+-------- Func: patterns
+---- Class: RewriteRule
+-------- Func: __init__
+-------- Func: _apply
+-------- Func: __str__
+-------- Func: __repr__
+---- Class: RuleSet
+-------- Func: __init__
+-------- Func: add
+-------- Func: iter_matches
+-------- Func: _rewrite
+-------- Func: rewrite
+---- Func: _top_level
+---- Func: _bottom_up
+---- Func: _match
+---- Func: _process_match
+
+dask/dask/datasets.py
+
+---- Func: timeseries
+---- Func: _generate_mimesis
+---- Func: _make_mimesis
+---- Func: make_people
+
+dask/dask/order.py
+
+---- Func: order
+-------- Func: dependents_key
+-------- Func: dependencies_key
+---- Func: graph_metrics
+---- Func: ndependencies
+---- Class: StrComparable
+-------- Func: __init__
+-------- Func: __lt__
+
+dask/dask/distributed.py
+
+
+dask/dask/cache.py
+
+---- Class: Cache
+-------- Func: __init__
+-------- Func: _start
+-------- Func: _pretask
+-------- Func: _posttask
+-------- Func: _finish
+
+dask/dask/dot.py
+
+---- Func: task_label
+---- Func: has_sub_tasks
+---- Func: name
+---- Func: label
+---- Func: box_label
+---- Func: to_graphviz
+---- Func: _get_display_cls
+---- Func: dot_graph
+---- Func: graphviz_to_file
+
+dask/dask/local.py
+
+---- Func: queue_get
+---- Func: queue_get
+---- Func: start_state_from_dask
+---- Func: execute_task
+---- Func: release_data
+---- Func: finish_task
+---- Func: nested_get
+---- Func: default_get_id
+---- Func: default_pack_exception
+---- Func: reraise
+---- Func: identity
+---- Func: get_async
+-------- Func: fire_task
+---- Func: apply_sync
+---- Func: get_sync
+---- Func: sortkey
+
+dask/dask/threaded.py
+
+---- Func: _thread_get_id
+---- Func: pack_exception
+---- Func: get
+
+dask/dask/blockwise.py
+
+---- Func: subs
+---- Func: index_subs
+---- Func: blockwise_token
+---- Func: blockwise
+---- Class: Blockwise
+-------- Func: __init__
+-------- Func: __repr__
+-------- Func: _dict
+-------- Func: __getitem__
+-------- Func: __iter__
+-------- Func: __len__
+-------- Func: _out_numblocks
+---- Func: make_blockwise_graph
+---- Func: lol_tuples
+---- Func: optimize_blockwise
+---- Func: _optimize_blockwise
+---- Func: rewrite_blockwise
+---- Func: zero_broadcast_dimensions
+---- Func: broadcast_dimensions
+---- Func: fuse_roots
+
+dask/dask/compatibility.py
+
+---- Func: is_dataclass
+---- Func: dataclass_fields
+
+dask/dask/optimization.py
+
+---- Func: cull
+---- Func: default_fused_linear_keys_renamer
+---- Func: fuse_linear
+---- Func: _flat_set
+---- Func: inline
+---- Func: inline_functions
+-------- Func: inlinable
+---- Func: unwrap_partial
+---- Func: functions_of
+---- Func: default_fused_keys_renamer
+---- Func: fuse
+---- Func: _inplace_fuse_subgraphs
+---- Func: key_split
+---- Class: SubgraphCallable
+-------- Func: __init__
+-------- Func: __repr__
+-------- Func: __eq__
+-------- Func: __ne__
+-------- Func: __call__
+-------- Func: __reduce__
+
+dask/dask/core.py
+
+---- Func: ishashable
+---- Func: istask
+---- Func: has_tasks
+---- Func: preorder_traversal
+---- Func: lists_to_tuples
+---- Func: _execute_task
+---- Func: get
+---- Func: get_dependencies
+---- Func: get_deps
+---- Func: flatten
+---- Func: reverse_dict
+---- Func: subs
+---- Func: _toposort
+---- Func: toposort
+---- Func: getcycle
+---- Func: isdag
+---- Class: literal
+-------- Func: __init__
+-------- Func: __repr__
+-------- Func: __reduce__
+-------- Func: __call__
+---- Func: quote
+
+dask/dask/highlevelgraph.py
+
+---- Class: HighLevelGraph
+-------- Func: __init__
+-------- Func: dependents
+-------- Func: dicts
+-------- Func: from_collections
+-------- Func: __getitem__
+-------- Func: __len__
+-------- Func: items
+-------- Func: __iter__
+-------- Func: keys
+-------- Func: values
+-------- Func: merge
+-------- Func: visualize
+---- Func: to_graphviz
+
+dask/dask/hashing.py
+
+---- Func: _hash_cityhash
+---- Func: _hash_xxhash
+---- Func: _hash_murmurhash
+---- Func: _hash_sha1
+---- Func: hash_buffer
+---- Func: hash_buffer_hex
+
+dask/dask/multiprocessing.py
+
+---- Func: _reduce_method_descriptor
+---- Func: _dumps
+---- Func: _process_get_id
+---- Class: RemoteException
+-------- Func: __init__
+-------- Func: __str__
+-------- Func: __dir__
+-------- Func: __getattr__
+---- Func: remote_exception
+---- Func: _pack_traceback
+---- Func: _pack_traceback
+---- Func: reraise
+---- Func: pack_exception
+---- Func: get_context
+---- Func: get
+---- Func: initialize_worker_process
+
+dask/dask/context.py
+
+---- Func: globalmethod
+---- Class: GlobalMethod
+-------- Func: __init__
+-------- Func: __get__
+
+dask/dask/utils.py
+
+---- Func: apply
+---- Func: deepmap
+---- Func: homogeneous_deepmap
+---- Func: ndeepmap
+---- Func: ignoring
+---- Func: import_required
+---- Func: tmpfile
+---- Func: tmpdir
+---- Func: filetext
+---- Func: changed_cwd
+---- Func: tmp_cwd
+---- Func: noop_context
+---- Class: IndexCallable
+-------- Func: __init__
+-------- Func: __getitem__
+---- Func: filetexts
+---- Func: concrete
+---- Func: pseudorandom
+---- Func: random_state_data
+---- Func: is_integer
+---- Func: getargspec
+---- Func: takes_multiple_arguments
+---- Func: get_named_args
+---- Class: Dispatch
+-------- Func: __init__
+-------- Func: register
+------------ Func: wrapper
+-------- Func: register_lazy
+------------ Func: wrapper
+-------- Func: dispatch
+-------- Func: __call__
+-------- Func: __doc__
+---- Func: ensure_not_exists
+---- Func: _skip_doctest
+---- Func: skip_doctest
+---- Func: extra_titles
+---- Func: ignore_warning
+---- Func: unsupported_arguments
+---- Func: _derived_from
+---- Func: derived_from
+-------- Func: wrapper
+------------ Func: wrapped
+---- Func: funcname
+---- Func: typename
+---- Func: ensure_bytes
+---- Func: ensure_unicode
+---- Func: digit
+---- Func: insert
+---- Func: dependency_depth
+-------- Func: max_depth_by_deps
+---- Func: memory_repr
+---- Func: asciitable
+---- Func: put_lines
+---- Class: methodcaller
+-------- Func: __new__
+-------- Func: __call__
+-------- Func: __reduce__
+-------- Func: __str__
+---- Class: itemgetter
+-------- Func: __init__
+-------- Func: __call__
+-------- Func: __reduce__
+-------- Func: __eq__
+---- Class: MethodCache
+---- Class: SerializableLock
+-------- Func: __init__
+-------- Func: acquire
+-------- Func: release
+-------- Func: __enter__
+-------- Func: __exit__
+-------- Func: locked
+-------- Func: __getstate__
+-------- Func: __setstate__
+-------- Func: __str__
+---- Func: get_scheduler_lock
+---- Func: ensure_dict
+---- Class: OperatorMethodMixin
+-------- Func: _bind_operator
+-------- Func: _get_unary_operator
+-------- Func: _get_binary_operator
+---- Func: partial_by_order
+---- Func: is_arraylike
+---- Func: is_dataframe_like
+---- Func: is_series_like
+---- Func: is_index_like
+---- Func: natural_sort_key
+---- Func: factors
+---- Func: parse_bytes
+---- Func: format_time
+---- Func: format_bytes
+---- Func: parse_timedelta
+---- Func: has_keyword
+---- Func: ndimlist
+
+dask/dask/config.py
+
+---- Func: canonical_name
+---- Func: update
+---- Func: merge
+---- Func: collect_yaml
+---- Func: collect_env
+---- Func: ensure_file
+---- Class: set
+-------- Func: __init__
+-------- Func: __enter__
+-------- Func: __exit__
+-------- Func: _assign
+---- Func: collect
+---- Func: refresh
+---- Func: get
+---- Func: rename
+---- Func: update_defaults
+---- Func: expand_environment_variables
+
+dask/dask/_version.py
+
+---- Func: get_keywords
+---- Class: VersioneerConfig
+---- Func: get_config
+---- Class: NotThisMethod
+---- Func: register_vcs_handler
+-------- Func: decorate
+---- Func: run_command
+---- Func: versions_from_parentdir
+---- Func: git_get_keywords
+---- Func: git_versions_from_keywords
+---- Func: git_pieces_from_vcs
+---- Func: plus_or_dot
+---- Func: render_pep440
+---- Func: render_pep440_pre
+---- Func: render_pep440_post
+---- Func: render_pep440_old
+---- Func: render_git_describe
+---- Func: render_git_describe_long
+---- Func: render
+---- Func: get_versions
+
+dask/dask/__init__.py
+
+
+dask/dask/sizeof.py
+
+---- Func: getsizeof
+---- Func: sizeof_default
+---- Func: sizeof_python_collection
+---- Func: sizeof_python_dict
+---- Func: register_cupy
+-------- Func: sizeof_cupy_ndarray
+---- Func: register_numba
+-------- Func: sizeof_numba_devicendarray
+---- Func: register_rmm
+-------- Func: sizeof_rmm_devicebuffer
+---- Func: register_numpy
+-------- Func: sizeof_numpy_ndarray
+---- Func: register_pandas
+-------- Func: object_size
+-------- Func: sizeof_pandas_dataframe
+-------- Func: sizeof_pandas_series
+-------- Func: sizeof_pandas_index
+-------- Func: sizeof_pandas_multiindex
+---- Func: register_spmatrix
+-------- Func: sizeof_spmatrix_dok
+-------- Func: sizeof_spmatrix
+---- Func: register_pyarrow
+-------- Func: _get_col_size
+-------- Func: sizeof_pyarrow_table
+-------- Func: sizeof_pyarrow_chunked_array
+-------- Func: sizeof_pyarrow_column
+
+dask/dask/delayed.py
+
+---- Func: unzip
+---- Func: finalize
+---- Func: unpack_collections
+---- Func: to_task_dask
+---- Func: tokenize
+---- Func: delayed
+---- Func: right
+-------- Func: _inner
+---- Func: optimize
+---- Func: rebuild
+---- Class: Delayed
+-------- Func: __init__
+-------- Func: __dask_graph__
+-------- Func: __dask_keys__
+-------- Func: __dask_layers__
+-------- Func: __dask_tokenize__
+-------- Func: __dask_postcompute__
+-------- Func: __dask_postpersist__
+-------- Func: __getstate__
+-------- Func: __setstate__
+-------- Func: key
+-------- Func: __repr__
+-------- Func: __hash__
+-------- Func: __dir__
+-------- Func: __getattr__
+-------- Func: __setattr__
+-------- Func: __setitem__
+-------- Func: __iter__
+-------- Func: __len__
+-------- Func: __call__
+-------- Func: __bool__
+-------- Func: __get__
+-------- Func: _get_binary_operator
+---- Func: call_function
+---- Class: DelayedLeaf
+-------- Func: __init__
+-------- Func: dask
+-------- Func: __call__
+---- Class: DelayedAttr
+-------- Func: __init__
+-------- Func: __getattr__
+-------- Func: dask
+-------- Func: __call__
+---- Func: single_key
+
+dask/dask/array/routines.py
+
+---- Func: array
+---- Func: result_type
+---- Func: atleast_3d
+---- Func: atleast_2d
+---- Func: atleast_1d
+---- Func: vstack
+---- Func: hstack
+---- Func: dstack
+---- Func: swapaxes
+---- Func: transpose
+---- Func: flip
+---- Func: flipud
+---- Func: fliplr
+---- Func: _tensordot
+---- Func: tensordot
+---- Func: dot
+---- Func: vdot
+---- Func: matmul
+---- Func: outer
+---- Func: _inner_apply_along_axis
+---- Func: apply_along_axis
+---- Func: apply_over_axes
+---- Func: ptp
+---- Func: diff
+---- Func: ediff1d
+---- Func: _gradient_kernel
+---- Func: gradient
+---- Func: _bincount_sum
+---- Func: bincount
+---- Func: digitize
+---- Func: histogram
+-------- Func: block_hist
+---- Func: cov
+---- Func: corrcoef
+---- Func: round
+---- Func: _unique_internal
+---- Func: unique
+---- Func: _isin_kernel
+---- Func: isin
+---- Func: roll
+---- Func: shape
+---- Func: union1d
+---- Func: ravel
+---- Func: squeeze
+---- Func: compress
+---- Func: extract
+---- Func: take
+---- Func: _take_dask_array_from_numpy
+---- Func: around
+---- Func: _asarray_isnull
+---- Func: isnull
+---- Func: notnull
+---- Func: isclose
+---- Func: allclose
+---- Func: variadic_choose
+---- Func: choose
+---- Func: _isnonzero_vec
+---- Func: isnonzero
+---- Func: argwhere
+---- Func: where
+---- Func: count_nonzero
+---- Func: flatnonzero
+---- Func: nonzero
+---- Func: _int_piecewise
+---- Func: _unravel_index_kernel
+---- Func: unravel_index
+---- Func: piecewise
+---- Func: coarsen
+---- Func: split_at_breaks
+---- Func: insert
+---- Func: _average
+---- Func: average
+
+dask/dask/array/creation.py
+
+---- Func: empty_like
+---- Func: ones_like
+---- Func: zeros_like
+---- Func: full_like
+---- Func: linspace
+---- Func: arange
+---- Func: meshgrid
+---- Func: indices
+---- Func: eye
+---- Func: diag
+---- Func: diagonal
+-------- Func: _axis_fmt
+-------- Func: _diag_len
+---- Func: triu
+---- Func: tril
+---- Func: _np_fromfunction
+-------- Func: offset_func
+---- Func: fromfunction
+---- Func: repeat
+---- Func: tile
+---- Func: expand_pad_value
+---- Func: get_pad_shapes_chunks
+---- Func: linear_ramp_chunk
+---- Func: pad_edge
+---- Func: pad_reuse
+---- Func: pad_stats
+---- Func: wrapped_pad_func
+---- Func: pad_udf
+---- Func: pad
+
+dask/dask/array/reductions.py
+
+---- Func: divide
+---- Func: reduction
+---- Func: _tree_reduce
+---- Func: partial_reduce
+---- Func: sum
+---- Func: prod
+---- Func: min
+---- Func: max
+---- Func: any
+---- Func: all
+---- Func: nansum
+---- Func: nanprod
+---- Func: nancumsum
+---- Func: nancumprod
+---- Func: nanmin
+---- Func: nanmax
+---- Func: numel
+---- Func: nannumel
+---- Func: mean_chunk
+---- Func: mean_combine
+---- Func: mean_agg
+---- Func: mean
+---- Func: nanmean
+---- Func: moment_chunk
+---- Func: _moment_helper
+---- Func: moment_combine
+---- Func: moment_agg
+---- Func: moment
+---- Func: var
+---- Func: nanvar
+---- Func: std
+---- Func: nanstd
+---- Func: _arg_combine
+---- Func: arg_chunk
+---- Func: arg_combine
+---- Func: arg_agg
+---- Func: nanarg_agg
+---- Func: arg_reduction
+---- Func: make_arg_reduction
+-------- Func: _
+---- Func: _nanargmin
+---- Func: _nanargmax
+---- Func: cumreduction
+---- Func: _cumsum_merge
+---- Func: _cumprod_merge
+---- Func: cumsum
+---- Func: cumprod
+---- Func: topk
+---- Func: argtopk
+---- Func: trace
+---- Func: median
+---- Func: nanmedian
+
+dask/dask/array/einsumfuncs.py
+
+---- Func: chunk_einsum
+---- Func: parse_einsum_input
+---- Func: einsum
+
+dask/dask/array/ma.py
+
+---- Func: normalize_masked_array
+---- Func: _concatenate
+---- Func: _tensordot
+---- Func: filled
+---- Func: _wrap_masked
+-------- Func: _
+---- Func: masked_equal
+---- Func: masked_invalid
+---- Func: masked_inside
+---- Func: masked_outside
+---- Func: masked_where
+---- Func: masked_values
+---- Func: fix_invalid
+---- Func: getdata
+---- Func: getmaskarray
+---- Func: _masked_array
+---- Func: masked_array
+---- Func: _set_fill_value
+---- Func: set_fill_value
+---- Func: average
+
+dask/dask/array/slicing.py
+
+---- Func: _sanitize_index_element
+---- Func: sanitize_index
+---- Func: slice_array
+---- Func: slice_with_newaxes
+---- Func: slice_wrap_lists
+---- Func: slice_slices_and_integers
+---- Func: _slice_1d
+---- Func: partition_by_size
+---- Func: issorted
+---- Func: slicing_plan
+---- Func: take
+---- Func: posify_index
+---- Func: _expander
+-------- Func: expand
+---- Func: expander
+---- Func: new_blockdim
+---- Func: replace_ellipsis
+---- Func: normalize_slice
+---- Func: normalize_index
+---- Func: check_index
+---- Func: slice_with_int_dask_array
+---- Func: slice_with_int_dask_array_on_axis
+---- Func: slice_with_bool_dask_array
+---- Func: getitem_variadic
+---- Func: make_block_sorted_slices
+---- Func: shuffle_slice
+---- Class: _HashIdWrapper
+-------- Func: __init__
+-------- Func: __eq__
+-------- Func: __ne__
+-------- Func: __hash__
+---- Func: _cumsum
+---- Func: cached_cumsum
+
+dask/dask/array/fft.py
+
+---- Func: _fft_out_chunks
+---- Func: _rfft_out_chunks
+---- Func: _irfft_out_chunks
+---- Func: _hfft_out_chunks
+---- Func: _ihfft_out_chunks
+---- Func: fft_wrap
+-------- Func: func
+-------- Func: func
+---- Func: _fftfreq_block
+---- Func: fftfreq
+---- Func: rfftfreq
+---- Func: _fftshift_helper
+---- Func: fftshift
+---- Func: ifftshift
+
+dask/dask/array/percentile.py
+
+---- Func: _percentile
+---- Func: _tdigest_chunk
+---- Func: _percentiles_from_tdigest
+---- Func: percentile
+---- Func: merge_percentiles
+
+dask/dask/array/reshape.py
+
+---- Func: reshape_rechunk
+---- Func: expand_tuple
+---- Func: contract_tuple
+---- Func: reshape
+
+dask/dask/array/blockwise.py
+
+---- Func: blockwise
+---- Func: atop
+
+dask/dask/array/overlap.py
+
+---- Func: fractional_slice
+---- Func: expand_key
+-------- Func: inds
+---- Func: overlap_internal
+---- Func: trim_overlap
+---- Func: trim_internal
+---- Func: _trim
+---- Func: periodic
+---- Func: reflect
+---- Func: nearest
+---- Func: constant
+---- Func: _remove_overlap_boundaries
+---- Func: boundaries
+---- Func: overlap
+---- Func: add_dummy_padding
+---- Func: map_overlap
+---- Func: coerce_depth
+---- Func: coerce_boundary
+
+dask/dask/array/optimization.py
+
+---- Func: optimize
+---- Func: hold_keys
+---- Func: optimize_slices
+---- Func: normalize_slice
+---- Func: check_for_nonfusible_fancy_indexing
+---- Func: fuse_slice
+
+dask/dask/array/chunk.py
+
+---- Func: keepdims_wrapper
+-------- Func: keepdims_wrapped_callable
+---- Func: coarsen
+---- Func: trim
+---- Func: topk
+---- Func: topk_aggregate
+---- Func: argtopk_preprocess
+---- Func: argtopk
+---- Func: argtopk_aggregate
+---- Func: arange
+---- Func: astype
+---- Func: view
+---- Func: slice_with_int_dask_array
+---- Func: slice_with_int_dask_array_aggregate
+
+dask/dask/array/backends.py
+
+---- Func: register_cupy
+-------- Func: _cupy_einsum
+---- Func: register_sparse
+---- Func: register_scipy_sparse
+-------- Func: _concatenate
+
+dask/dask/array/core.py
+
+---- Class: PerformanceWarning
+---- Func: getter
+---- Func: getter_nofancy
+---- Func: getter_inline
+---- Func: implements
+-------- Func: decorator
+---- Func: slices_from_chunks
+---- Func: getem
+---- Func: dotmany
+---- Func: _concatenate2
+---- Func: apply_infer_dtype
+---- Func: normalize_arg
+---- Func: map_blocks
+---- Func: broadcast_chunks
+---- Func: store
+---- Func: blockdims_from_blockshape
+---- Func: finalize
+---- Class: Array
+-------- Func: __new__
+-------- Func: __reduce__
+-------- Func: __dask_graph__
+-------- Func: __dask_layers__
+-------- Func: __dask_keys__
+------------ Func: keys
+-------- Func: __dask_tokenize__
+-------- Func: __dask_postcompute__
+-------- Func: __dask_postpersist__
+-------- Func: numblocks
+-------- Func: npartitions
+-------- Func: compute_chunk_sizes
+-------- Func: shape
+-------- Func: chunksize
+-------- Func: dtype
+-------- Func: _get_chunks
+-------- Func: _set_chunks
+-------- Func: __len__
+-------- Func: __array_ufunc__
+-------- Func: __repr__
+-------- Func: _repr_html_
+-------- Func: _repr_html_table
+-------- Func: ndim
+-------- Func: size
+-------- Func: nbytes
+-------- Func: itemsize
+-------- Func: name
+-------- Func: name
+-------- Func: __array__
+-------- Func: __array_function__
+------------ Func: handle_nonmatching_names
+-------- Func: _elemwise
+-------- Func: store
+-------- Func: to_svg
+-------- Func: to_hdf5
+-------- Func: to_dask_dataframe
+-------- Func: __bool__
+-------- Func: _scalarfunc
+-------- Func: __int__
+-------- Func: __float__
+-------- Func: __complex__
+-------- Func: __setitem__
+-------- Func: __getitem__
+-------- Func: _vindex
+-------- Func: vindex
+-------- Func: _blocks
+-------- Func: blocks
+-------- Func: partitions
+-------- Func: dot
+-------- Func: A
+-------- Func: T
+-------- Func: transpose
+-------- Func: ravel
+-------- Func: choose
+-------- Func: reshape
+-------- Func: topk
+-------- Func: argtopk
+-------- Func: astype
+-------- Func: __abs__
+-------- Func: __add__
+-------- Func: __radd__
+-------- Func: __and__
+-------- Func: __rand__
+-------- Func: __div__
+-------- Func: __rdiv__
+-------- Func: __eq__
+-------- Func: __gt__
+-------- Func: __ge__
+-------- Func: __invert__
+-------- Func: __lshift__
+-------- Func: __rlshift__
+-------- Func: __lt__
+-------- Func: __le__
+-------- Func: __mod__
+-------- Func: __rmod__
+-------- Func: __mul__
+-------- Func: __rmul__
+-------- Func: __ne__
+-------- Func: __neg__
+-------- Func: __or__
+-------- Func: __pos__
+-------- Func: __ror__
+-------- Func: __pow__
+-------- Func: __rpow__
+-------- Func: __rshift__
+-------- Func: __rrshift__
+-------- Func: __sub__
+-------- Func: __rsub__
+-------- Func: __truediv__
+-------- Func: __rtruediv__
+-------- Func: __floordiv__
+-------- Func: __rfloordiv__
+-------- Func: __xor__
+-------- Func: __rxor__
+-------- Func: __matmul__
+-------- Func: __rmatmul__
+-------- Func: __divmod__
+-------- Func: __rdivmod__
+-------- Func: any
+-------- Func: all
+-------- Func: min
+-------- Func: max
+-------- Func: argmin
+-------- Func: argmax
+-------- Func: sum
+-------- Func: trace
+-------- Func: prod
+-------- Func: mean
+-------- Func: std
+-------- Func: var
+-------- Func: moment
+-------- Func: map_blocks
+-------- Func: map_overlap
+-------- Func: cumsum
+-------- Func: cumprod
+-------- Func: squeeze
+-------- Func: rechunk
+-------- Func: real
+-------- Func: imag
+-------- Func: conj
+-------- Func: clip
+-------- Func: view
+-------- Func: swapaxes
+-------- Func: round
+-------- Func: copy
+-------- Func: __deepcopy__
+-------- Func: to_delayed
+-------- Func: repeat
+-------- Func: nonzero
+-------- Func: to_zarr
+-------- Func: to_tiledb
+---- Func: ensure_int
+---- Func: normalize_chunks
+---- Func: auto_chunks
+---- Func: round_to
+---- Func: _get_chunk_shape
+---- Func: from_array
+---- Func: from_zarr
+---- Func: to_zarr
+---- Func: _check_regular_chunks
+---- Func: from_delayed
+---- Func: from_func
+---- Func: common_blockdim
+---- Func: unify_chunks
+---- Func: unpack_singleton
+---- Func: block
+-------- Func: atleast_nd
+-------- Func: format_index
+---- Func: concatenate
+---- Func: load_store_chunk
+---- Func: store_chunk
+---- Func: load_chunk
+---- Func: insert_to_ooc
+---- Func: retrieve_from_ooc
+---- Func: asarray
+---- Func: asanyarray
+---- Func: is_scalar_for_elemwise
+---- Func: broadcast_shapes
+---- Func: elemwise
+---- Func: handle_out
+---- Func: _enforce_dtype
+---- Func: broadcast_to
+---- Func: broadcast_arrays
+---- Func: offset_func
+-------- Func: _offset
+---- Func: chunks_from_arrays
+-------- Func: shape
+---- Func: deepfirst
+---- Func: shapelist
+---- Func: reshapelist
+---- Func: transposelist
+---- Func: stack
+---- Func: concatenate3
+-------- Func: dtype
+---- Func: concatenate_axes
+---- Func: to_hdf5
+---- Func: interleave_none
+---- Func: keyname
+---- Func: _vindex
+---- Func: _vindex_array
+---- Func: _get_axis
+---- Func: _vindex_slice
+---- Func: _vindex_transpose
+---- Func: _vindex_merge
+---- Func: to_npy_stack
+---- Func: from_npy_stack
+
+dask/dask/array/numpy_compat.py
+
+---- Func: divide
+---- Func: _make_along_axis_idx
+---- Func: take_along_axis
+---- Func: _make_sliced_dtype_np_ge_16
+---- Func: _make_sliced_dtype_np_lt_14
+---- Class: _Recurser
+-------- Func: __init__
+-------- Func: map_reduce
+------------ Func: f
+-------- Func: walk
+---- Func: moveaxis
+---- Func: rollaxis
+
+dask/dask/array/svg.py
+
+---- Func: svg
+---- Func: svg_2d
+---- Func: svg_3d
+---- Func: svg_nd
+---- Func: svg_lines
+---- Func: svg_grid
+---- Func: svg_1d
+---- Func: grid_points
+---- Func: draw_sizes
+---- Func: ratio_response
+
+dask/dask/array/stats.py
+
+---- Func: ttest_ind
+---- Func: ttest_1samp
+---- Func: ttest_rel
+---- Func: chisquare
+---- Func: power_divergence
+---- Func: skew
+---- Func: skewtest
+---- Func: kurtosis
+---- Func: kurtosistest
+---- Func: normaltest
+---- Func: f_oneway
+---- Func: moment
+---- Func: _equal_var_ttest_denom
+---- Func: _unequal_var_ttest_denom
+---- Func: _ttest_ind_from_stats
+---- Func: _ttest_finish
+---- Func: _count
+---- Func: _sum_of_squares
+---- Func: _square_of_sums
+
+dask/dask/array/wrap.py
+
+---- Func: _parse_wrap_args
+---- Func: wrap_func_shape_as_first_arg
+---- Func: wrap_func_like
+---- Func: wrap_func_like_safe
+---- Func: wrap
+
+dask/dask/array/tiledb_io.py
+
+---- Func: _tiledb_to_chunks
+---- Func: from_tiledb
+---- Func: to_tiledb
+
+dask/dask/array/rechunk.py
+
+---- Func: cumdims_label
+---- Func: _breakpoints
+---- Func: _intersect_1d
+---- Func: _old_to_new
+---- Func: intersect_chunks
+---- Func: rechunk
+---- Func: _number_of_blocks
+---- Func: _largest_block_size
+---- Func: estimate_graph_size
+---- Func: divide_to_width
+---- Func: merge_to_number
+---- Func: find_merge_rechunk
+-------- Func: key
+---- Func: find_split_rechunk
+---- Func: plan_rechunk
+---- Func: _compute_rechunk
+---- Class: _PrettyBlocks
+-------- Func: __init__
+-------- Func: __str__
+---- Func: format_blocks
+---- Func: format_chunks
+---- Func: format_plan
+
+dask/dask/array/utils.py
+
+---- Func: normalize_to_array
+---- Func: meta_from_array
+---- Func: compute_meta
+---- Func: allclose
+---- Func: same_keys
+-------- Func: key
+---- Func: _not_empty
+---- Func: _check_dsk
+---- Func: assert_eq_shape
+---- Func: _get_dt_meta_computed
+---- Func: assert_eq
+---- Func: safe_wraps
+---- Func: empty_like_safe
+---- Func: full_like_safe
+---- Func: ones_like_safe
+---- Func: zeros_like_safe
+---- Func: validate_axis
+---- Func: _is_nep18_active
+-------- Class: A
+------------ Func: __array_function__
+
+dask/dask/array/image.py
+
+---- Func: add_leading_dimension
+---- Func: imread
+
+dask/dask/array/__init__.py
+
+
+dask/dask/array/gufunc.py
+
+---- Func: _parse_gufunc_signature
+---- Func: _validate_normalize_axes
+---- Func: apply_gufunc
+---- Class: gufunc
+-------- Func: __init__
+-------- Func: __call__
+---- Func: as_gufunc
+-------- Func: _as_gufunc
+
+dask/dask/array/ufunc.py
+
+---- Func: __array_wrap__
+---- Func: wrap_elemwise
+-------- Func: wrapped
+---- Class: da_frompyfunc
+-------- Func: __init__
+-------- Func: __repr__
+-------- Func: __dask_tokenize__
+-------- Func: __reduce__
+-------- Func: __call__
+-------- Func: __getattr__
+-------- Func: __dir__
+---- Func: frompyfunc
+---- Class: ufunc
+-------- Func: __init__
+-------- Func: __getattr__
+-------- Func: __dir__
+-------- Func: __repr__
+-------- Func: __call__
+-------- Func: outer
+---- Func: angle
+---- Func: frexp
+---- Func: modf
+---- Func: divmod
+
+dask/dask/array/linalg.py
+
+---- Func: _cumsum_blocks
+---- Func: _cumsum_part
+---- Func: _nanmin
+---- Func: _wrapped_qr
+---- Func: tsqr
+---- Func: sfqr
+---- Func: compression_level
+---- Func: compression_matrix
+---- Func: svd_compressed
+---- Func: qr
+---- Func: svd
+---- Func: _solve_triangular_lower
+---- Func: lu
+---- Func: solve_triangular
+-------- Func: _b_init
+-------- Func: _key
+---- Func: solve
+---- Func: inv
+---- Func: _cholesky_lower
+---- Func: cholesky
+---- Func: _cholesky
+---- Func: _sort_decreasing
+---- Func: lstsq
+---- Func: norm
+
+dask/dask/array/random.py
+
+---- Func: doc_wraps
+-------- Func: _
+---- Class: RandomState
+-------- Func: __init__
+-------- Func: seed
+-------- Func: _wrap
+------------ Func: _broadcast_any
+-------- Func: beta
+-------- Func: binomial
+-------- Func: chisquare
+-------- Func: choice
+-------- Func: exponential
+-------- Func: f
+-------- Func: gamma
+-------- Func: geometric
+-------- Func: gumbel
+-------- Func: hypergeometric
+-------- Func: laplace
+-------- Func: logistic
+-------- Func: lognormal
+-------- Func: logseries
+-------- Func: multinomial
+-------- Func: negative_binomial
+-------- Func: noncentral_chisquare
+-------- Func: noncentral_f
+-------- Func: normal
+-------- Func: pareto
+-------- Func: permutation
+-------- Func: poisson
+-------- Func: power
+-------- Func: randint
+-------- Func: random_integers
+-------- Func: random_sample
+-------- Func: rayleigh
+-------- Func: standard_cauchy
+-------- Func: standard_exponential
+-------- Func: standard_gamma
+-------- Func: standard_normal
+-------- Func: standard_t
+-------- Func: tomaxint
+-------- Func: triangular
+-------- Func: uniform
+-------- Func: vonmises
+-------- Func: wald
+-------- Func: weibull
+-------- Func: zipf
+---- Func: _choice
+---- Func: _apply_random
+
+dask/dask/array/tests/test_linalg.py
+
+---- Func: test_tsqr
+---- Func: test_tsqr_uncertain
+---- Func: test_tsqr_zero_height_chunks
+---- Func: test_sfqr
+---- Func: test_qr
+---- Func: test_linalg_consistent_names
+---- Func: test_dask_svd_self_consistent
+---- Func: test_svd_compressed
+---- Func: test_svd_compressed_deterministic
+---- Func: _check_lu_result
+---- Func: test_lu_1
+---- Func: test_lu_2
+---- Func: test_lu_3
+---- Func: test_lu_errors
+---- Func: test_solve_triangular_vector
+---- Func: test_solve_triangular_matrix
+---- Func: test_solve_triangular_matrix2
+---- Func: test_solve_triangular_errors
+---- Func: test_solve
+---- Func: test_inv
+---- Func: _get_symmat
+---- Func: test_solve_sym_pos
+---- Func: test_cholesky
+---- Func: test_lstsq
+---- Func: test_no_chunks_svd
+---- Func: test_norm_any_ndim
+---- Func: test_norm_any_slice
+---- Func: test_norm_1dim
+---- Func: test_norm_2dim
+---- Func: test_norm_implemented_errors
+---- Func: test_svd_compressed_compute
+
+dask/dask/array/tests/test_reductions.py
+
+---- Func: assert_eq
+---- Func: test_numel
+---- Func: reduction_1d_test
+---- Func: test_reductions_1D
+---- Func: reduction_2d_test
+---- Func: test_reduction_errors
+---- Func: test_reductions_2D
+---- Func: test_arg_reductions
+---- Func: test_nanarg_reductions
+---- Func: test_arg_reductions_unknown_chunksize
+---- Func: test_arg_reductions_unknown_chunksize_2d
+---- Func: test_arg_reductions_unknown_single_chunksize
+---- Func: test_reductions_2D_nans
+---- Func: test_moment
+-------- Func: moment
+---- Func: test_reductions_with_negative_axes
+---- Func: test_nan
+---- Func: test_nan_object
+---- Func: test_0d_array
+---- Func: test_reduction_on_scalar
+---- Func: test_reductions_with_empty_array
+---- Func: assert_max_deps
+---- Func: test_tree_reduce_depth
+---- Func: test_tree_reduce_set_options
+---- Func: test_reduction_names
+---- Func: test_array_reduction_out
+---- Func: test_array_cumreduction_axis
+---- Func: test_array_cumreduction_out
+---- Func: test_topk_argtopk1
+---- Func: test_topk_argtopk2
+---- Func: test_topk_argtopk3
+---- Func: test_regres_3940
+---- Func: test_trace
+-------- Func: _assert
+---- Func: test_median
+
+dask/dask/array/tests/test_reshape.py
+
+---- Func: test_reshape_rechunk
+---- Func: test_expand_tuple
+---- Func: test_contract_tuple
+
+dask/dask/array/tests/test_chunk.py
+
+---- Func: test_keepdims_wrapper_no_axis
+-------- Func: summer
+---- Func: test_keepdims_wrapper_one_axis
+-------- Func: summer
+---- Func: test_keepdims_wrapper_two_axes
+-------- Func: summer
+---- Func: test_coarsen
+---- Func: test_integer_input
+
+dask/dask/array/tests/test_array_core.py
+
+---- Func: test_getem
+---- Func: test_top
+---- Func: test_top_supports_broadcasting_rules
+---- Func: test_top_literals
+---- Func: test_blockwise_literals
+---- Func: test_concatenate3_on_scalars
+---- Func: test_chunked_dot_product
+---- Func: test_chunked_transpose_plus_one
+---- Func: test_broadcast_dimensions_works_with_singleton_dimensions
+---- Func: test_broadcast_dimensions
+---- Func: test_Array
+---- Func: test_uneven_chunks
+---- Func: test_numblocks_suppoorts_singleton_block_dims
+---- Func: test_keys
+---- Func: test_Array_computation
+---- Func: test_Array_numpy_gufunc_call__array_ufunc__01
+---- Func: test_Array_numpy_gufunc_call__array_ufunc__02
+---- Func: test_stack
+---- Func: test_stack_zero_size
+---- Func: test_short_stack
+---- Func: test_stack_scalars
+---- Func: test_stack_promote_type
+---- Func: test_stack_rechunk
+---- Func: test_concatenate
+---- Func: test_concatenate_types
+---- Func: test_concatenate_unknown_axes
+---- Func: test_concatenate_rechunk
+---- Func: test_concatenate_fixlen_strings
+---- Func: test_concatenate_zero_size
+---- Func: test_block_simple_row_wise
+---- Func: test_block_simple_column_wise
+---- Func: test_block_with_1d_arrays_row_wise
+---- Func: test_block_with_1d_arrays_multiple_rows
+---- Func: test_block_with_1d_arrays_column_wise
+---- Func: test_block_mixed_1d_and_2d
+---- Func: test_block_complicated
+---- Func: test_block_nested
+---- Func: test_block_3d
+---- Func: test_block_with_mismatched_shape
+---- Func: test_block_no_lists
+---- Func: test_block_invalid_nesting
+---- Func: test_block_empty_lists
+---- Func: test_block_tuple
+---- Func: test_broadcast_shapes
+---- Func: test_elemwise_on_scalars
+---- Func: test_elemwise_with_ndarrays
+---- Func: test_elemwise_differently_chunked
+---- Func: test_elemwise_dtype
+---- Func: test_operators
+---- Func: test_operator_dtype_promotion
+---- Func: test_field_access
+---- Func: test_field_access_with_shape
+---- Func: test_matmul
+---- Func: test_matmul_array_ufunc
+---- Func: test_T
+---- Func: test_broadcast_to
+---- Func: test_broadcast_to_array
+---- Func: test_broadcast_to_scalar
+---- Func: test_broadcast_to_chunks
+---- Func: test_broadcast_arrays
+---- Func: test_broadcast_arrays_uneven_chunks
+---- Func: test_broadcast_operator
+---- Func: test_reshape
+---- Func: test_reshape_exceptions
+---- Func: test_reshape_splat
+---- Func: test_reshape_fails_for_dask_only
+---- Func: test_reshape_unknown_dimensions
+---- Func: test_full
+---- Func: test_map_blocks
+---- Func: test_map_blocks2
+-------- Func: func
+---- Func: test_map_blocks_block_info
+-------- Func: func
+---- Func: test_map_blocks_block_info_with_new_axis
+-------- Func: func
+---- Func: test_map_blocks_block_info_with_drop_axis
+-------- Func: func
+---- Func: test_map_blocks_block_info_with_broadcast
+-------- Func: func
+---- Func: test_map_blocks_with_constants
+---- Func: test_map_blocks_with_kwargs
+---- Func: test_map_blocks_with_chunks
+---- Func: test_map_blocks_dtype_inference
+-------- Func: foo
+-------- Func: foo
+---- Func: test_map_blocks_infer_newaxis
+---- Func: test_map_blocks_no_array_args
+-------- Func: func
+---- Func: test_repr
+---- Func: test_repr_meta
+---- Func: test_slicing_with_ellipsis
+---- Func: test_slicing_with_ndarray
+---- Func: test_slicing_flexible_type
+---- Func: test_dtype
+---- Func: test_blockdims_from_blockshape
+---- Func: test_coerce
+---- Func: test_bool
+---- Func: test_store_kwargs
+-------- Func: get_func
+---- Func: test_store_delayed_target
+-------- Func: make_target
+---- Func: test_store
+---- Func: test_store_regions
+---- Func: test_store_compute_false
+---- Func: test_store_nocompute_regions
+---- Class: ThreadSafetyError
+---- Class: NonthreadSafeStore
+-------- Func: __init__
+-------- Func: __setitem__
+---- Class: ThreadSafeStore
+-------- Func: __init__
+-------- Func: __setitem__
+---- Class: CounterLock
+-------- Func: __init__
+-------- Func: acquire
+-------- Func: release
+---- Func: test_store_locks
+---- Func: test_store_method_return
+---- Func: test_store_multiprocessing_lock
+---- Func: test_to_hdf5
+---- Func: test_to_dask_dataframe
+---- Func: test_np_array_with_zero_dimensions
+---- Func: test_dtype_complex
+-------- Func: assert_eq
+---- Func: test_astype
+---- Func: test_arithmetic
+---- Func: test_elemwise_consistent_names
+---- Func: test_optimize
+---- Func: test_slicing_with_non_ndarrays
+-------- Class: ARangeSlice
+------------ Func: __init__
+------------ Func: __array__
+-------- Class: ARangeSlicable
+------------ Func: __init__
+------------ Func: shape
+------------ Func: __getitem__
+---- Func: test_getter
+---- Func: test_size
+---- Func: test_nbytes
+---- Func: test_itemsize
+---- Func: test_Array_normalizes_dtype
+---- Func: test_from_array_with_lock
+---- Class: MyArray
+-------- Func: __init__
+-------- Func: __getitem__
+---- Func: test_from_array_tasks_always_call_getter
+---- Func: test_from_array_ndarray_onechunk
+---- Func: test_from_array_ndarray_getitem
+---- Func: test_from_array_list
+---- Func: test_from_array_scalar
+---- Func: test_from_array_no_asarray
+-------- Func: assert_chunks_are_of_type
+---- Func: test_from_array_getitem
+-------- Func: my_getitem
+---- Func: test_from_array_minus_one
+---- Func: test_from_array_copy
+---- Func: test_from_array_dask_array
+---- Func: test_asarray
+---- Func: test_asarray_dask_dataframe
+---- Func: test_asarray_h5py
+---- Func: test_asarray_chunks
+---- Func: test_asanyarray
+---- Func: test_asanyarray_dataframe
+---- Func: test_asanyarray_datetime64
+---- Func: test_from_func
+---- Func: test_concatenate3_2
+---- Func: test_map_blocks3
+---- Func: test_from_array_with_missing_chunks
+---- Func: test_normalize_chunks
+---- Func: test_align_chunks_to_previous_chunks
+---- Func: test_raise_on_no_chunks
+---- Func: test_chunks_is_immutable
+---- Func: test_raise_on_bad_kwargs
+---- Func: test_long_slice
+---- Func: test_h5py_newaxis
+---- Func: test_ellipsis_slicing
+---- Func: test_point_slicing
+---- Func: test_point_slicing_with_full_slice
+---- Func: test_slice_with_floats
+---- Func: test_slice_with_integer_types
+---- Func: test_index_with_integer_types
+---- Func: test_vindex_basic
+---- Func: test_vindex_nd
+---- Func: test_vindex_negative
+---- Func: test_vindex_errors
+---- Func: test_vindex_merge
+---- Func: test_vindex_identity
+---- Func: test_empty_array
+---- Func: test_memmap
+---- Func: test_to_npy_stack
+---- Func: test_view
+---- Func: test_view_fortran
+---- Func: test_h5py_tokenize
+---- Func: test_map_blocks_with_changed_dimension
+---- Func: test_map_blocks_with_changed_dimension_and_broadcast_chunks
+---- Func: test_broadcast_chunks
+---- Func: test_chunks_error
+---- Func: test_array_compute_forward_kwargs
+---- Func: test_dont_fuse_outputs
+---- Func: test_dont_dealias_outputs
+---- Func: test_timedelta_op
+---- Func: test_to_delayed
+---- Func: test_to_delayed_optimize_graph
+---- Func: test_cumulative
+---- Func: test_from_delayed
+---- Func: test_from_delayed_meta
+---- Func: test_A_property
+---- Func: test_copy_mutate
+---- Func: test_npartitions
+---- Func: test_astype_gh1151
+---- Func: test_elemwise_name
+---- Func: test_map_blocks_name
+---- Func: test_from_array_names
+---- Func: test_array_picklable
+---- Func: test_from_array_raises_on_bad_chunks
+---- Func: test_concatenate_axes
+---- Func: test_blockwise_concatenate
+-------- Func: f
+-------- Func: f
+---- Func: test_common_blockdim
+---- Func: test_uneven_chunks_that_fit_neatly
+---- Func: test_elemwise_uneven_chunks
+---- Func: test_uneven_chunks_blockwise
+---- Func: test_warn_bad_rechunking
+---- Func: test_concatenate_stack_dont_warn
+---- Func: test_map_blocks_delayed
+---- Func: test_no_chunks
+---- Func: test_no_chunks_2d
+---- Func: test_no_chunks_yes_chunks
+---- Func: test_raise_informative_errors_no_chunks
+---- Func: test_no_chunks_slicing_2d
+---- Func: test_index_array_with_array_1d
+---- Func: test_index_array_with_array_2d
+---- Func: test_index_array_with_array_3d_2d
+---- Func: test_setitem_1d
+---- Func: test_setitem_2d
+---- Func: test_setitem_errs
+---- Func: test_zero_slice_dtypes
+---- Func: test_zero_sized_array_rechunk
+---- Func: test_blockwise_zero_shape
+---- Func: test_blockwise_zero_shape_new_axes
+---- Func: test_broadcast_against_zero_shape
+---- Func: test_from_array_name
+---- Func: test_concatenate_errs
+---- Func: test_stack_errs
+---- Func: test_blockwise_with_numpy_arrays
+---- Func: test_elemwise_with_lists
+---- Func: test_constructor_plugin
+---- Func: test_no_warnings_on_metadata
+---- Func: test_delayed_array_key_hygeine
+---- Func: test_empty_chunks_in_array_len
+---- Func: test_meta
+---- Func: test_normalize_chunks_auto_1d
+---- Func: test_normalize_chunks_auto_2d
+---- Func: test_normalize_chunks_auto_3d
+---- Func: test_constructors_chunks_dict
+---- Func: test_from_array_chunks_dict
+---- Func: test_normalize_chunks_object_dtype
+---- Func: test_normalize_chunks_tuples_of_tuples
+---- Func: test_normalize_chunks_nan
+---- Func: test_from_zarr_unique_name
+---- Func: test_from_zarr_name
+---- Func: test_zarr_roundtrip
+---- Func: test_zarr_return_stored
+---- Func: test_zarr_existing_array
+---- Func: test_to_zarr_unknown_chunks_raises
+---- Func: test_read_zarr_chunks
+---- Func: test_zarr_pass_mapper
+---- Func: test_zarr_group
+---- Func: test_regular_chunks
+---- Func: test_zarr_nocompute
+---- Func: test_tiledb_roundtrip
+---- Func: test_tiledb_multiattr
+---- Func: test_blocks_indexer
+---- Func: test_partitions_indexer
+---- Func: test_dask_array_holds_scipy_sparse_containers
+---- Func: test_3851
+---- Func: test_3925
+---- Func: test_map_blocks_large_inputs_delayed
+---- Func: test_blockwise_large_inputs_delayed
+---- Func: test_slice_reversed
+---- Func: test_map_blocks_chunks
+-------- Func: func
+---- Func: test_nbytes_auto
+---- Func: test_auto_chunks_h5py
+---- Func: test_no_warnings_from_blockwise
+---- Func: test_from_array_meta
+---- Func: test_compute_chunk_sizes
+---- Func: test_compute_chunk_sizes_2d_array
+---- Func: test_compute_chunk_sizes_3d_array
+---- Func: _known
+---- Func: unknown
+---- Func: test_compute_chunk_sizes_warning_fixes_rechunk
+---- Func: test_compute_chunk_sizes_warning_fixes_to_zarr
+---- Func: test_compute_chunk_sizes_warning_fixes_to_svg
+---- Func: test_compute_chunk_sizes_warning_fixes_concatenate
+---- Func: test_compute_chunk_sizes_warning_fixes_reduction
+---- Func: test_compute_chunk_sizes_warning_fixes_reshape
+---- Func: test_compute_chunk_sizes_warning_fixes_slicing
+---- Func: test_rechunk_auto
+
+dask/dask/array/tests/test_linearoperator.py
+
+---- Func: test_LinearOperator
+
+dask/dask/array/tests/test_ufunc.py
+
+---- Func: test_ufunc_meta
+---- Func: test_ufunc
+---- Func: test_unary_ufunc
+---- Func: test_binary_ufunc
+---- Func: test_ufunc_outer
+---- Func: test_complex
+---- Func: test_ufunc_2results
+---- Func: test_clip
+---- Func: test_angle
+---- Func: test_issignedinf
+---- Func: test_non_ufunc_others
+---- Func: test_frompyfunc
+---- Func: test_frompyfunc_wrapper
+---- Func: test_array_ufunc
+---- Func: test_array_ufunc_binop
+---- Func: test_array_ufunc_out
+---- Func: test_unsupported_ufunc_methods
+---- Func: test_out_numpy
+---- Func: test_out_shape_mismatch
+---- Func: test_divmod
+
+dask/dask/array/tests/test_array_function.py
+
+---- Func: test_array_function_dask
+---- Func: test_array_function_fft
+---- Func: test_array_notimpl_function_dask
+---- Func: test_array_function_sparse
+---- Func: test_array_function_sparse_tensordot
+---- Func: test_array_function_cupy_svd
+---- Func: test_unregistered_func
+-------- Func: wrap
+------------ Func: wrapped
+-------- Func: dispatch_property
+------------ Func: wrapped
+-------- Class: EncapsulateNDArray
+------------ Func: __init__
+------------ Func: __array__
+------------ Func: __array_function__
+------------ Func: __array_ufunc__
+---- Func: test_non_existent_func
+
+dask/dask/array/tests/test_array_utils.py
+
+---- Func: test_meta_from_array
+---- Func: test_meta_from_array_type_inputs
+
+dask/dask/array/tests/test_overlap.py
+
+---- Func: test_fractional_slice
+---- Func: test_overlap_internal
+---- Func: test_overlap_internal_asymmetric
+---- Func: test_overlap_internal_asymmetric_small
+---- Func: test_trim_internal
+---- Func: test_periodic
+---- Func: test_reflect
+---- Func: test_nearest
+---- Func: test_constant
+---- Func: test_boundaries
+---- Func: test_overlap
+---- Func: test_asymmetric_overlap_boundary_exception
+---- Func: test_map_overlap
+---- Func: test_map_overlap_no_depth
+---- Func: test_nearest_overlap
+---- Func: test_0_depth
+---- Func: test_some_0_depth
+---- Func: test_one_chunk_along_axis
+---- Func: test_constant_boundaries
+---- Func: test_depth_equals_boundary_length
+---- Func: test_depth_greater_than_boundary_length
+---- Func: test_bad_depth_raises
+---- Func: test_none_boundaries
+---- Func: test_overlap_small
+---- Func: test_no_shared_keys_with_different_depths
+-------- Func: check
+---- Func: test_overlap_few_dimensions_small
+---- Func: test_overlap_few_dimensions
+---- Func: test_trim_boundry
+
+dask/dask/array/tests/test_testing.py
+
+---- Func: test_assert_eq_checks_scalars
+
+dask/dask/array/tests/test_xarray.py
+
+---- Func: test_mean
+---- Func: test_asarray
+---- Func: test_asanyarray
+
+dask/dask/array/tests/test_routines.py
+
+---- Func: test_array
+---- Func: test_array_return_type
+---- Func: test_derived_docstrings
+---- Func: test_atleast_nd_no_args
+---- Func: test_atleast_nd_one_arg
+---- Func: test_atleast_nd_two_args
+---- Func: test_transpose
+---- Func: test_transpose_negative_axes
+---- Func: test_transpose_skip_when_possible
+---- Func: test_swapaxes
+---- Func: test_moveaxis_rollaxis
+---- Func: test_moveaxis_rollaxis_keyword
+---- Func: test_moveaxis_rollaxis_numpy_api
+---- Func: test_flip
+---- Func: test_matmul
+---- Func: test_tensordot
+---- Func: test_tensordot_2
+---- Func: test_tensordot_more_than_26_dims
+---- Func: test_dot_method
+---- Func: test_vdot
+---- Func: test_inner
+---- Func: test_apply_along_axis
+---- Func: test_apply_over_axes
+---- Func: test_ptp
+---- Func: test_diff
+---- Func: test_ediff1d
+---- Func: test_gradient
+---- Func: test_bincount
+---- Func: test_bincount_with_weights
+---- Func: test_bincount_unspecified_minlength
+---- Func: test_digitize
+---- Func: test_histogram
+---- Func: test_histogram_alternative_bins_range
+---- Func: test_histogram_bins_range_with_nan_array
+---- Func: test_histogram_return_type
+---- Func: test_histogram_extra_args_and_shapes
+---- Func: test_histogram_normed_deprecation
+---- Func: test_histogram_bin_range_raises
+---- Func: test_cov
+---- Func: test_corrcoef
+---- Func: test_round
+---- Func: test_unique_kwargs
+---- Func: test_unique_rand
+---- Func: test_isin_rand
+---- Func: test_isin_assume_unique
+---- Func: _maybe_len
+---- Func: test_roll
+---- Func: test_shape
+---- Func: test_union1d
+---- Func: test_ravel
+---- Func: test_ravel_1D_no_op
+---- Func: test_squeeze
+---- Func: test_vstack
+---- Func: test_hstack
+---- Func: test_dstack
+---- Func: test_stack_unknown_chunk_sizes
+---- Func: test_take
+---- Func: test_take_dask_from_numpy
+---- Func: test_compress
+---- Func: test_extract
+---- Func: test_isnull
+---- Func: test_isnull_result_is_an_array
+---- Func: test_isclose
+---- Func: test_allclose
+---- Func: test_choose
+---- Func: test_piecewise
+---- Func: test_piecewise_otherwise
+---- Func: test_argwhere
+---- Func: test_argwhere_obj
+---- Func: test_argwhere_str
+---- Func: test_where
+---- Func: test_where_scalar_dtype
+---- Func: test_where_bool_optimization
+---- Func: test_where_nonzero
+---- Func: test_where_incorrect_args
+---- Func: test_count_nonzero
+---- Func: test_count_nonzero_axis
+---- Func: test_count_nonzero_obj
+---- Func: test_count_nonzero_obj_axis
+---- Func: test_count_nonzero_str
+---- Func: test_flatnonzero
+---- Func: test_nonzero
+---- Func: test_nonzero_method
+---- Func: test_unravel_index_empty
+---- Func: test_unravel_index
+---- Func: test_coarsen
+---- Func: test_coarsen_with_excess
+---- Func: test_insert
+---- Func: test_multi_insert
+---- Func: test_result_type
+---- Func: _numpy_and_dask_inputs
+-------- Func: _shape_from_string
+-------- Func: _chunks_from_string
+---- Func: test_einsum
+---- Func: test_einsum_optimize
+---- Func: test_einsum_order
+---- Func: test_einsum_casting
+---- Func: test_einsum_split_every
+---- Func: test_einsum_invalid_args
+---- Func: test_einsum_broadcasting_contraction
+---- Func: test_einsum_broadcasting_contraction2
+---- Func: test_einsum_broadcasting_contraction3
+---- Func: test_average
+---- Func: test_average_weights
+---- Func: test_average_raises
+
+dask/dask/array/tests/test_wrap.py
+
+---- Func: test_ones
+---- Func: test_size_as_list
+---- Func: test_singleton_size
+---- Func: test_kwargs
+---- Func: test_full
+---- Func: test_can_make_really_big_array_of_ones
+---- Func: test_wrap_consistent_names
+
+dask/dask/array/tests/test_fft.py
+
+---- Func: test_cant_fft_chunked_axis
+---- Func: test_fft
+---- Func: test_fft2n_shapes
+---- Func: test_fft_n_kwarg
+---- Func: test_fft_consistent_names
+---- Func: test_wrap_bad_kind
+---- Func: test_nd_ffts_axes
+---- Func: test_wrap_ffts
+---- Func: test_wrap_fftns
+---- Func: test_fftfreq
+---- Func: test_rfftfreq
+---- Func: test_fftshift
+---- Func: test_fftshift_identity
+
+dask/dask/array/tests/test_slicing.py
+
+---- Func: test_slice_1d
+---- Func: test_slice_singleton_value_on_boundary
+---- Func: test_slice_array_1d
+---- Func: test_slice_array_2d
+---- Func: test_slice_optimizations
+---- Func: test_slicing_with_singleton_indices
+---- Func: test_slicing_with_newaxis
+---- Func: test_take
+---- Func: test_take_sorted
+---- Func: test_slicing_chunks
+---- Func: test_slicing_with_numpy_arrays
+---- Func: test_slicing_and_chunks
+---- Func: test_slicing_identities
+---- Func: test_slice_stop_0
+---- Func: test_slice_list_then_None
+---- Class: ReturnItem
+-------- Func: __getitem__
+---- Func: test_slicing_exhaustively
+---- Func: test_slicing_with_negative_step_flops_keys
+---- Func: test_empty_slice
+---- Func: test_multiple_list_slicing
+---- Func: test_boolean_list_slicing
+---- Func: test_boolean_numpy_array_slicing
+---- Func: test_empty_list
+---- Func: test_uneven_chunks
+---- Func: test_new_blockdim
+---- Func: test_slicing_consistent_names
+---- Func: test_slicing_consistent_names_after_normalization
+---- Func: test_sanitize_index_element
+---- Func: test_sanitize_index
+---- Func: test_uneven_blockdims
+---- Func: test_oob_check
+---- Func: test_index_with_int_dask_array
+---- Func: test_index_with_int_dask_array_0d
+---- Func: test_index_with_int_dask_array_nanchunks
+---- Func: test_index_with_int_dask_array_negindex
+---- Func: test_index_with_int_dask_array_indexerror
+---- Func: test_index_with_int_dask_array_dtypes
+---- Func: test_index_with_int_dask_array_nocompute
+-------- Func: crash
+---- Func: test_index_with_bool_dask_array
+---- Func: test_index_with_bool_dask_array_2
+---- Func: test_cull
+---- Func: test_slicing_with_Nones
+---- Func: test_slicing_integer_no_warnings
+---- Func: test_slicing_none_int_ellipes
+---- Func: test_None_overlap_int
+---- Func: test_negative_n_slicing
+---- Func: test_negative_list_slicing
+---- Func: test_permit_oob_slices
+---- Func: test_normalize_index
+---- Func: test_take_semi_sorted
+---- Func: test_slicing_plan
+---- Func: test_pathological_unsorted_slicing
+---- Func: test_cached_cumsum
+---- Func: test_cached_cumsum_nan
+---- Func: test_cached_cumsum_non_tuple
+---- Func: test_setitem_with_different_chunks_preserves_shape
+---- Func: test_gh3579
+---- Func: test_make_blockwise_sorted_slice
+---- Func: test_shuffle_slice
+---- Func: test_gh4043
+
+dask/dask/array/tests/test_cupy.py
+
+---- Func: test_basic
+---- Func: test_sizeof
+---- Func: test_diag
+---- Func: test_diagonal
+---- Func: test_tril_triu
+---- Func: test_tril_triu_non_square_arrays
+---- Func: test_apply_gufunc_axis
+-------- Func: mydiff
+---- Func: test_overlap_internal
+---- Func: test_trim_internal
+---- Func: test_periodic
+---- Func: test_reflect
+---- Func: test_nearest
+---- Func: test_constant
+---- Func: test_boundaries
+---- Func: test_random_all
+-------- Func: rnd_test
+---- Func: test_random_shapes
+---- Func: test_tsqr
+---- Func: test_tsqr_uncertain
+---- Func: test_sfqr
+---- Func: test_bincount
+
+dask/dask/array/tests/test_sparse.py
+
+---- Func: test_basic
+---- Func: test_tensordot
+---- Func: test_mixed_concatenate
+---- Func: test_mixed_random
+---- Func: test_mixed_output_type
+---- Func: test_metadata
+---- Func: test_html_repr
+---- Func: test_from_delayed_meta
+-------- Func: f
+---- Func: test_from_array
+---- Func: test_map_blocks
+---- Func: test_meta_from_array
+
+dask/dask/array/tests/test_image.py
+
+---- Func: random_images
+---- Func: test_imread
+---- Func: test_imread_with_custom_function
+-------- Func: imread2
+---- Func: test_preprocess
+-------- Func: preprocess
+
+dask/dask/array/tests/test_creation.py
+
+---- Func: test_arr_like
+---- Func: test_linspace
+---- Func: test_arange
+---- Func: test_arange_dtypes
+---- Func: test_arange_cast_float_int_step
+---- Func: test_arange_float_step
+---- Func: test_indices_wrong_chunks
+---- Func: test_indices_dimensions_chunks
+---- Func: test_empty_indicies
+---- Func: test_indicies
+---- Func: test_meshgrid
+---- Func: test_meshgrid_inputcoercion
+---- Func: test_tril_triu
+---- Func: test_tril_triu_errors
+---- Func: test_tril_triu_non_square_arrays
+---- Func: test_eye
+---- Func: test_diag
+---- Func: test_diagonal
+---- Func: test_fromfunction
+---- Func: test_repeat
+---- Func: test_tile_basic
+---- Func: test_tile_chunks
+---- Func: test_tile_neg_reps
+---- Func: test_tile_zero_reps
+---- Func: test_tile_empty_array
+---- Func: test_tile_np_kroncompare_examples
+---- Func: test_pad_0_width
+---- Func: test_pad
+---- Func: test_pad_udf
+-------- Func: udf_pad
+---- Func: test_auto_chunks
+
+dask/dask/array/tests/test_masked.py
+
+---- Func: test_tokenize_masked_array
+---- Func: test_from_array_masked_array
+---- Func: test_copy_deepcopy
+---- Func: test_basic
+---- Func: test_tensordot
+---- Func: test_mixed_concatenate
+---- Func: test_mixed_random
+---- Func: test_mixed_output_type
+---- Func: test_creation_functions
+---- Func: test_filled
+---- Func: assert_eq_ma
+---- Func: test_reductions
+---- Func: test_arg_reductions
+---- Func: test_cumulative
+---- Func: test_accessors
+---- Func: test_masked_array
+---- Func: test_set_fill_value
+---- Func: test_average_weights_with_masked_array
+---- Func: test_arithmetic_results_in_masked
+
+dask/dask/array/tests/test_atop.py
+
+---- Func: test_rewrite
+---- Func: test_index_subs
+---- Func: test_optimize_blockwise
+---- Func: test_blockwise_diamond_fusion
+---- Func: test_blockwise_non_blockwise_output
+---- Func: test_top_len
+---- Func: test_inner_compute
+---- Func: test_common_token_names_args
+---- Func: test_common_token_names_kwargs
+---- Func: test_blockwise_names
+---- Func: test_blockwise_new_axes
+-------- Func: f
+-------- Func: f
+-------- Func: f
+---- Func: test_blockwise_new_axes_2
+-------- Func: func
+---- Func: test_blockwise_stacked_new_axes
+-------- Func: f
+---- Func: test_blockwise_stacked_new_axes_front
+-------- Func: f
+---- Func: test_blockwise_stacked_new_axes_same_dim
+-------- Func: f
+---- Func: test_blockwise_new_axes_chunked
+-------- Func: f
+---- Func: test_blockwise_no_args
+-------- Func: f
+---- Func: test_blockwise_no_array_args
+-------- Func: f
+---- Func: test_blockwise_kwargs
+-------- Func: f
+---- Func: test_blockwise_chunks
+-------- Func: double
+---- Func: test_blockwise_numpy_arg
+---- Func: test_bag_array_conversion
+---- Func: test_svd
+---- Func: test_args_delayed
+---- Func: test_namedtuple
+-------- Func: f
+---- Func: test_validate_top_inputs
+---- Func: test_dont_merge_before_reductions
+---- Func: test_atop_legacy
+
+dask/dask/array/tests/test_random.py
+
+---- Func: test_RandomState
+---- Func: test_concurrency
+---- Func: test_doc_randomstate
+---- Func: test_serializability
+---- Func: test_determinisim_through_dask_values
+---- Func: test_randomstate_consistent_names
+---- Func: test_random
+---- Func: test_parametrized_random_function
+---- Func: test_kwargs
+---- Func: test_unique_names
+---- Func: test_docs
+---- Func: test_can_make_really_big_random_array
+---- Func: test_random_seed
+---- Func: test_consistent_across_sizes
+---- Func: test_random_all
+---- Func: test_array_broadcasting
+---- Func: test_multinomial
+---- Func: test_choice
+---- Func: test_create_with_auto_dimensions
+---- Func: test_names
+---- Func: test_permutation
+---- Func: test_external_randomstate_class
+---- Func: test_auto_chunks
+---- Func: test_randint_dtype
+
+dask/dask/array/tests/test_optimization.py
+
+---- Func: test_fuse_getitem
+---- Func: test_fuse_getitem_lock
+---- Func: test_optimize_with_getitem_fusion
+---- Func: test_optimize_slicing
+---- Func: test_fuse_slice
+---- Func: test_fuse_slice_with_lists
+---- Func: test_nonfusible_fancy_indexing
+---- Func: test_hard_fuse_slice_cases
+---- Func: test_dont_fuse_numpy_arrays
+---- Func: test_minimize_data_transfer
+---- Func: test_fuse_slices_with_alias
+---- Func: test_dont_fuse_fancy_indexing_in_getter_nofancy
+---- Func: test_fuse_getter_with_asarray
+---- Func: test_remove_no_op_slices_if_get_is_not_getter_or_getter_nofancy
+---- Func: test_turn_off_fusion
+---- Func: test_gh3937
+---- Func: test_double_dependencies
+---- Func: test_fuse_roots
+
+dask/dask/array/tests/test_numpy_compat.py
+
+---- Func: dtype
+---- Func: index
+---- Func: test_basic
+---- Func: test_slice_dtype
+---- Func: test_min_max_round_funcs
+
+dask/dask/array/tests/__init__.py
+
+
+dask/dask/array/tests/test_stats.py
+
+---- Func: test_measures
+---- Func: test_bias_raises
+---- Func: test_one
+---- Func: test_two
+---- Func: test_moments
+---- Func: test_anova
+---- Func: test_nan_raises
+---- Func: test_power_divergence_invalid
+---- Func: test_skew_raises
+
+dask/dask/array/tests/test_svg.py
+
+---- Func: parses
+---- Func: test_basic
+---- Func: test_repr_html
+---- Func: test_errors
+---- Func: test_repr_html
+---- Func: test_draw_sizes
+---- Func: test_3d
+
+dask/dask/array/tests/test_rechunk.py
+
+---- Func: test_rechunk_internals_1
+---- Func: test_intersect_1
+---- Func: test_intersect_2
+---- Func: test_rechunk_1d
+---- Func: test_rechunk_2d
+---- Func: test_rechunk_4d
+---- Func: test_rechunk_expand
+---- Func: test_rechunk_expand2
+---- Func: test_rechunk_method
+---- Func: test_rechunk_blockshape
+---- Func: test_dtype
+---- Func: test_rechunk_with_dict
+---- Func: test_rechunk_with_empty_input
+---- Func: test_rechunk_with_null_dimensions
+---- Func: test_rechunk_with_integer
+---- Func: test_rechunk_0d
+---- Func: test_rechunk_empty
+---- Func: test_rechunk_same
+---- Func: test_rechunk_with_zero_placeholders
+---- Func: test_rechunk_minus_one
+---- Func: test_rechunk_intermediates
+---- Func: test_divide_to_width
+---- Func: test_merge_to_number
+---- Func: _plan
+---- Func: _assert_steps
+---- Func: test_plan_rechunk
+---- Func: test_plan_rechunk_5d
+---- Func: test_plan_rechunk_heterogenous
+---- Func: test_plan_rechunk_asymmetric
+---- Func: test_rechunk_warning
+---- Func: test_dont_concatenate_single_chunks
+---- Func: test_intersect_nan
+---- Func: test_intersect_nan_single
+---- Func: test_intersect_nan_long
+---- Func: test_rechunk_unknown_from_pandas
+---- Func: test_rechunk_unknown_from_array
+---- Func: test_rechunk_unknown
+---- Func: test_rechunk_unknown_explicit
+---- Func: assert_chunks_match
+---- Func: test_rechunk_unknown_raises
+---- Func: test_old_to_new_single
+---- Func: test_old_to_new
+---- Func: test_old_to_new_large
+---- Func: test_changing_raises
+---- Func: test_old_to_new_known
+---- Func: test_rechunk_zero_dim
+---- Func: test_rechunk_empty_chunks
+---- Func: test_rechunk_avoid_needless_chunking
+---- Func: test_rechunk_auto_1d
+---- Func: test_rechunk_auto_2d
+---- Func: test_rechunk_auto_3d
+---- Func: test_rechunk_auto_image_stack
+---- Func: test_rechunk_down
+---- Func: test_rechunk_zero
+---- Func: test_rechunk_bad_keys
+
+dask/dask/array/tests/test_gufunc.py
+
+---- Func: test__parse_gufunc_signature
+---- Func: test_apply_gufunc_axes_input_validation_01
+-------- Func: foo
+---- Func: test__validate_normalize_axes_01
+---- Func: test__validate_normalize_axes_02
+---- Func: test__validate_normalize_axes_03
+---- Func: test_apply_gufunc_01
+-------- Func: stats
+---- Func: test_apply_gufunc_01b
+-------- Func: stats
+---- Func: test_apply_gufunc_output_dtypes_string
+-------- Func: stats
+---- Func: test_apply_gufunc_output_dtypes_string_many_outputs
+-------- Func: stats
+---- Func: test_apply_gufunc_pass_additional_kwargs
+-------- Func: foo
+---- Func: test_apply_gufunc_02
+-------- Func: outer_product
+---- Func: test_apply_gufunc_scalar_output
+-------- Func: foo
+---- Func: test_apply_gufunc_elemwise_01
+-------- Func: add
+---- Func: test_apply_gufunc_elemwise_01b
+-------- Func: add
+---- Func: test_apply_gufunc_elemwise_02
+-------- Func: addmul
+---- Func: test_gufunc_vector_output
+-------- Func: foo
+---- Func: test_apply_gufunc_elemwise_loop
+-------- Func: foo
+---- Func: test_apply_gufunc_elemwise_core
+-------- Func: foo
+---- Func: test_apply_gufunc_two_scalar_output
+-------- Func: foo
+---- Func: test_apply_gufunc_two_mixed_outputs
+-------- Func: foo
+---- Func: test_apply_gufunc_output_dtypes
+-------- Func: foo
+---- Func: test_gufunc_two_inputs
+-------- Func: foo
+---- Func: test_gufunc_mixed_inputs
+-------- Func: foo
+---- Func: test_gufunc
+-------- Func: foo
+---- Func: test_as_gufunc
+-------- Func: foo
+---- Func: test_apply_gufunc_broadcasting_loopdims
+-------- Func: foo
+---- Func: test_apply_gufunc_check_same_dimsizes
+-------- Func: foo
+---- Func: test_apply_gufunc_check_coredim_chunksize
+-------- Func: foo
+---- Func: test_apply_gufunc_check_inhomogeneous_chunksize
+-------- Func: foo
+---- Func: test_apply_gufunc_infer_dtype
+-------- Func: foo
+-------- Func: foo
+-------- Func: foo
+---- Func: test_apply_gufunc_axis_01
+-------- Func: mymedian
+---- Func: test_apply_gufunc_axis_02
+-------- Func: myfft
+---- Func: test_apply_gufunc_axis_02b
+-------- Func: myfilter
+---- Func: test_apply_gufunc_axis_03
+-------- Func: mydiff
+---- Func: test_apply_gufunc_axis_keepdims
+-------- Func: mymedian
+---- Func: test_apply_gufunc_axes_01
+-------- Func: mystats
+---- Func: test_apply_gufunc_axes_02
+-------- Func: matmul
+---- Func: test_apply_gufunc_axes_two_kept_coredims
+-------- Func: outer_product
+---- Func: test_apply_gufunc_via_numba_01
+-------- Func: g
+---- Func: test_apply_gufunc_via_numba_02
+-------- Func: mysum
+---- Func: test_preserve_meta_type
+-------- Func: stats
+
+dask/dask/array/tests/test_percentiles.py
+
+---- Func: test_percentile
+---- Func: test_percentile_with_categoricals
+---- Func: test_percentiles_with_empty_arrays
+---- Func: test_percentiles_with_scaler_percentile
+---- Func: test_unknown_chunk_sizes
+
+dask/dask/diagnostics/progress.py
+
+---- Func: format_time
+---- Class: ProgressBar
+-------- Func: __init__
+-------- Func: _start
+-------- Func: _pretask
+-------- Func: _finish
+-------- Func: _timer_func
+-------- Func: _update_bar
+-------- Func: _draw_bar
+
+dask/dask/diagnostics/profile_visualize.py
+
+---- Func: unquote
+---- Func: pprint_task
+---- Func: get_colors
+---- Func: visualize
+---- Func: _get_figure_keywords
+---- Func: plot_tasks
+---- Func: plot_resources
+---- Func: fix_bounds
+---- Func: plot_cache
+
+dask/dask/diagnostics/__init__.py
+
+
+dask/dask/diagnostics/profile.py
+
+---- Class: Profiler
+-------- Func: __init__
+-------- Func: __enter__
+-------- Func: _start
+-------- Func: _pretask
+-------- Func: _posttask
+-------- Func: _finish
+-------- Func: _plot
+-------- Func: visualize
+-------- Func: clear
+---- Class: ResourceProfiler
+-------- Func: __init__
+-------- Func: _is_running
+-------- Func: _start_collect
+-------- Func: _stop_collect
+-------- Func: __enter__
+-------- Func: __exit__
+-------- Func: _start
+-------- Func: _finish
+-------- Func: close
+-------- Func: clear
+-------- Func: _plot
+-------- Func: visualize
+---- Class: _Tracker
+-------- Func: __init__
+-------- Func: shutdown
+-------- Func: _update_pids
+-------- Func: run
+---- Class: CacheProfiler
+-------- Func: __init__
+-------- Func: __enter__
+-------- Func: _start
+-------- Func: _posttask
+-------- Func: _finish
+-------- Func: _plot
+-------- Func: visualize
+-------- Func: clear
+
+dask/dask/diagnostics/tests/test_progress.py
+
+---- Func: check_bar_completed
+---- Func: test_array_compute
+---- Func: test_progressbar
+---- Func: test_minimum_time
+---- Func: test_clean_exit
+---- Func: test_format_time
+---- Func: test_register
+---- Func: test_no_tasks
+---- Func: test_with_cache
+---- Func: test_with_alias
+---- Func: test_store_time
+
+dask/dask/diagnostics/tests/test_profiler.py
+
+---- Func: test_profiler
+---- Func: test_profiler_works_under_error
+---- Func: test_two_gets
+---- Func: test_resource_profiler
+---- Func: test_resource_profiler_multiple_gets
+---- Func: test_cache_profiler
+-------- Func: nbytes
+---- Func: test_register
+---- Func: test_unquote
+---- Func: test_pprint_task
+-------- Func: foo
+---- Func: check_title
+---- Func: test_profiler_plot
+---- Func: test_resource_profiler_plot
+---- Func: test_cache_profiler_plot
+---- Func: test_plot_multiple
+---- Func: test_saves_file
+---- Func: test_get_colors
+
+dask/dask/diagnostics/tests/__init__.py
+
+
+dask/dask/tests/test_core.py
+
+---- Func: contains
+---- Func: test_istask
+---- Func: test_has_tasks
+---- Func: test_preorder_traversal
+---- Class: TestGet
+---- Func: test_GetFunctionTestMixin_class
+-------- Class: TestCustomGetFail
+-------- Class: TestCustomGetPass
+---- Func: test_get_dependencies_nested
+---- Func: test_get_dependencies_empty
+---- Func: test_get_dependencies_list
+---- Func: test_get_dependencies_task
+---- Func: test_get_dependencies_nothing
+---- Func: test_get_dependencies_many
+---- Func: test_get_dependencies_task_none
+---- Func: test_get_deps
+---- Func: test_flatten
+---- Func: test_subs
+---- Class: MutateOnEq
+-------- Func: __eq__
+---- Func: test_subs_no_key_data_eq
+---- Func: test_subs_with_unfriendly_eq
+-------- Class: MyException
+-------- Class: F
+------------ Func: __eq__
+---- Func: test_subs_with_surprisingly_friendly_eq
+---- Func: test_subs_unexpected_hashable_key
+-------- Class: UnexpectedButHashable
+------------ Func: __init__
+------------ Func: __hash__
+------------ Func: __eq__
+---- Func: test_quote
+---- Func: test_literal_serializable
+
+dask/dask/tests/test_highgraph.py
+
+---- Func: test_visualize
+---- Func: test_basic
+---- Func: test_keys_values_items_methods
+
+dask/dask/tests/test_sizeof.py
+
+---- Func: test_base
+---- Func: test_name
+---- Func: test_containers
+---- Func: test_numpy
+---- Func: test_pandas
+---- Func: test_pandas_multiindex
+---- Func: test_pandas_repeated_column
+---- Func: test_sparse_matrix
+---- Func: test_serires_object_dtype
+---- Func: test_dataframe_object_dtype
+---- Func: test_empty
+---- Func: test_pyarrow_table
+---- Func: test_dict
+
+dask/dask/tests/test_local.py
+
+---- Func: test_start_state
+---- Func: test_start_state_looks_at_cache
+---- Func: test_start_state_with_redirects
+---- Func: test_start_state_with_independent_but_runnable_tasks
+---- Func: test_start_state_with_tasks_no_deps
+---- Func: test_finish_task
+---- Class: TestGetAsync
+-------- Func: test_get_sync_num_workers
+---- Func: test_cache_options
+-------- Func: inc2
+---- Func: test_sort_key
+---- Func: test_callback
+-------- Func: start_callback
+-------- Func: end_callback
+---- Func: test_exceptions_propagate
+-------- Class: MyException
+------------ Func: __init__
+------------ Func: __str__
+-------- Func: f
+---- Func: test_ordering
+-------- Func: append
+
+dask/dask/tests/test_context.py
+
+---- Func: test_with_get
+-------- Func: myget
+---- Func: foo
+---- Func: bar
+---- Class: Foo
+-------- Func: f
+---- Func: test_globalmethod
+
+dask/dask/tests/test_callbacks.py
+
+---- Func: test_start_callback
+-------- Class: MyCallback
+------------ Func: _start
+---- Func: test_start_state_callback
+-------- Class: MyCallback
+------------ Func: _start_state
+---- Func: test_finish_always_called
+-------- Class: MyCallback
+------------ Func: _finish
+-------- Func: raise_keyboard
+---- Func: test_nested_schedulers
+-------- Class: MyCallback
+------------ Func: _start
+------------ Func: _pretask
+-------- Func: nested_call
+---- Func: test_add_remove_mutates_not_replaces
+
+dask/dask/tests/test_base.py
+
+---- Func: import_or_none
+---- Func: f1
+---- Func: f2
+---- Func: f3
+---- Func: test_normalize_function
+---- Func: test_tokenize
+---- Func: test_tokenize_numpy_array_consistent_on_values
+---- Func: test_tokenize_numpy_array_supports_uneven_sizes
+---- Func: test_tokenize_discontiguous_numpy_array
+---- Func: test_tokenize_numpy_datetime
+---- Func: test_tokenize_numpy_scalar
+---- Func: test_tokenize_numpy_scalar_string_rep
+---- Func: test_tokenize_numpy_array_on_object_dtype
+---- Func: test_tokenize_numpy_memmap_offset
+---- Func: test_tokenize_numpy_memmap
+---- Func: test_tokenize_numpy_memmap_no_filename
+---- Func: test_tokenize_numpy_ufunc_consistent
+---- Func: test_tokenize_partial_func_args_kwargs_consistent
+---- Func: test_normalize_base
+---- Func: test_tokenize_pandas
+---- Func: test_tokenize_pandas_invalid_unicode
+---- Func: test_tokenize_pandas_mixed_unicode_bytes
+---- Func: test_tokenize_pandas_no_pickle
+-------- Class: NoPickle
+---- Func: test_tokenize_kwargs
+---- Func: test_tokenize_same_repr
+-------- Class: Foo
+------------ Func: __init__
+------------ Func: __repr__
+---- Func: test_tokenize_method
+-------- Class: Foo
+------------ Func: __init__
+------------ Func: __dask_tokenize__
+---- Func: test_tokenize_sequences
+---- Func: test_tokenize_dict
+---- Func: test_tokenize_set
+---- Func: test_tokenize_ordered_dict
+---- Func: test_tokenize_object_array_with_nans
+---- Func: test_tokenize_base_types
+---- Func: test_tokenize_numpy_matrix
+---- Func: test_tokenize_dense_sparse_array
+---- Func: test_is_dask_collection
+-------- Class: DummyCollection
+------------ Func: __init__
+------------ Func: __dask_graph__
+---- Func: test_unpack_collections
+-------- Func: build
+-------- Func: fail
+---- Class: Tuple
+-------- Func: __init__
+-------- Func: __add__
+-------- Func: __dask_graph__
+-------- Func: __dask_keys__
+-------- Func: __dask_tokenize__
+-------- Func: __dask_postcompute__
+-------- Func: __dask_postpersist__
+---- Func: test_custom_collection
+---- Func: test_compute_no_opt
+---- Func: test_compute_array
+---- Func: test_persist_array
+---- Func: test_compute_dataframe
+---- Func: test_compute_array_dataframe
+---- Func: test_compute_dataframe_valid_unicode_in_bytes
+---- Func: test_compute_dataframe_invalid_unicode
+---- Func: test_compute_array_bag
+---- Func: test_compute_with_literal
+---- Func: test_compute_nested
+---- Func: test_visualize
+---- Func: test_visualize_lists
+---- Func: test_visualize_order
+---- Func: test_use_cloudpickle_to_tokenize_functions_in__main__
+---- Func: inc_to_dec
+---- Func: test_optimizations_keyword
+---- Func: test_optimize
+---- Func: test_optimize_nested
+---- Func: test_default_imports
+---- Func: test_persist_literals
+---- Func: test_persist_nested
+---- Func: test_persist_delayed
+---- Func: test_persist_array_bag
+---- Func: test_normalize_function_limited_size
+---- Func: test_optimize_globals
+-------- Func: optimize_double
+---- Func: test_optimize_None
+-------- Func: my_get
+---- Func: test_scheduler_keyword
+-------- Func: schedule
+---- Func: test_raise_get_keyword
+---- Func: test_get_scheduler
+---- Func: test_callable_scheduler
+-------- Func: get
+---- Func: test_num_workers_config
+-------- Func: f
+
+dask/dask/tests/test_threaded.py
+
+---- Func: test_get
+---- Func: test_nested_get
+---- Func: test_get_without_computation
+---- Func: test_broken_callback
+-------- Func: _f_ok
+-------- Func: _f_broken
+---- Func: bad
+---- Func: test_exceptions_rise_to_top
+---- Func: test_reuse_pool
+---- Func: test_pool_kwarg
+-------- Func: f
+---- Func: test_threaded_within_thread
+-------- Func: f
+---- Func: test_dont_spawn_too_many_threads
+---- Func: test_dont_spawn_too_many_threads_CPU_COUNT
+---- Func: test_thread_safety
+-------- Func: f
+-------- Func: test_f
+---- Func: test_interrupt
+-------- Func: interrupt_main
+-------- Func: long_task
+
+dask/dask/tests/test_dot.py
+
+---- Func: get_label
+---- Func: get_shape
+---- Func: test_task_label
+---- Func: test_label
+---- Func: test_to_graphviz
+---- Func: test_to_graphviz_custom
+---- Func: test_to_graphviz_attributes
+---- Func: test_aliases
+---- Func: test_dot_graph
+---- Func: test_dot_graph_no_filename
+---- Func: test_dot_graph_defaults
+---- Func: test_filenames_and_formats
+---- Func: test_delayed_kwargs_apply
+-------- Func: f
+
+dask/dask/tests/test_utils.py
+
+---- Func: test_getargspec
+-------- Func: func
+-------- Func: wrapper
+-------- Class: MyType
+------------ Func: __init__
+---- Func: test_takes_multiple_arguments
+-------- Func: multi
+-------- Class: Singular
+------------ Func: __init__
+-------- Class: Multi
+------------ Func: __init__
+-------- Func: f
+-------- Func: vararg
+---- Func: test_dispatch
+-------- Func: f
+-------- Class: Bar
+---- Func: test_dispatch_kwargs
+---- Func: test_dispatch_variadic_on_first_argument
+---- Func: test_dispatch_lazy
+-------- Func: foo_dec
+-------- Func: register_decimal
+---- Func: test_random_state_data
+---- Func: test_memory_repr
+---- Func: test_method_caller
+---- Func: test_skip_doctest
+---- Func: test_extra_titles
+---- Func: test_asciitable
+---- Func: test_SerializableLock
+---- Func: test_SerializableLock_name_collision
+---- Func: test_SerializableLock_locked
+---- Func: test_SerializableLock_acquire_blocking
+---- Func: test_funcname
+-------- Func: foo
+-------- Class: Foo
+---- Func: test_funcname_long
+-------- Func: a_long_function_name_11111111111111111111111111111111111111111111111
+---- Func: test_funcname_toolz
+-------- Func: foo
+---- Func: test_funcname_multipledispatch
+-------- Func: foo
+---- Func: test_funcname_numpy_vectorize
+---- Func: test_ndeepmap
+---- Func: test_ensure_dict
+-------- Class: mydict
+---- Func: test_itemgetter
+---- Func: test_partial_by_order
+---- Func: test_has_keyword
+-------- Func: foo
+---- Func: test_derived_from
+-------- Class: Foo
+------------ Func: f
+-------- Class: Bar
+------------ Func: f
+-------- Class: Zap
+------------ Func: f
+---- Func: test_derived_from_func
+-------- Func: sum
+---- Func: test_derived_from_dask_dataframe
+---- Func: test_parse_bytes
+---- Func: test_parse_timedelta
+---- Func: test_is_arraylike
+
+dask/dask/tests/test_rewrite.py
+
+---- Func: double
+---- Func: test_head
+---- Func: test_args
+---- Func: test_traverser
+---- Func: repl_list
+---- Func: test_RewriteRule
+---- Func: test_RewriteRuleSubs
+---- Func: test_RuleSet
+---- Func: test_matches
+---- Func: test_rewrite
+
+dask/dask/tests/test_order.py
+
+---- Func: abcde
+---- Func: issorted
+---- Func: f
+---- Func: test_ordering_keeps_groups_together
+---- Func: test_avoid_broker_nodes
+---- Func: test_base_of_reduce_preferred
+---- Func: test_avoid_upwards_branching
+---- Func: test_avoid_upwards_branching_complex
+---- Func: test_deep_bases_win_over_dependents
+---- Func: test_prefer_deep
+---- Func: test_stacklimit
+---- Func: test_break_ties_by_str
+---- Func: test_order_doesnt_fail_on_mixed_type_keys
+---- Func: test_gh_3055
+---- Func: test_type_comparisions_ok
+---- Func: test_prefer_short_dependents
+---- Func: test_run_smaller_sections
+-------- Func: f
+------------ Func: _
+---- Func: test_local_parents_of_reduction
+-------- Func: f
+------------ Func: _
+---- Func: test_nearest_neighbor
+---- Func: test_string_ordering
+---- Func: test_string_ordering_dependents
+---- Func: test_prefer_short_narrow
+---- Func: test_prefer_short_ancestor
+---- Func: test_map_overlap
+---- Func: test_use_structure_not_keys
+---- Func: test_dont_run_all_dependents_too_early
+---- Func: test_many_branches_use_ndependencies
+---- Func: test_order_cycle
+---- Func: test_order_empty
+
+dask/dask/tests/test_hashing.py
+
+---- Func: test_hash_buffer
+---- Func: test_hash_buffer_hex
+---- Func: test_hashers
+
+dask/dask/tests/test_delayed.py
+
+---- Class: Tuple
+-------- Func: __init__
+-------- Func: __dask_tokenize__
+-------- Func: __dask_graph__
+-------- Func: __dask_keys__
+-------- Func: __dask_postcompute__
+---- Func: test_to_task_dask
+-------- Class: MyClass
+---- Func: test_delayed
+---- Func: test_delayed_with_dataclass
+-------- Func: return_nested
+---- Func: test_operators
+-------- Class: dummy
+------------ Func: __matmul__
+---- Func: test_methods
+---- Func: test_attributes
+---- Func: test_method_getattr_call_same_task
+---- Func: test_np_dtype_of_delayed
+---- Func: test_delayed_errors
+---- Func: test_common_subexpressions
+---- Func: test_delayed_optimize
+---- Func: test_lists
+---- Func: test_literates
+---- Func: test_literates_keys
+---- Func: test_lists_are_concrete
+---- Func: test_iterators
+-------- Func: f
+---- Func: test_traverse_false
+-------- Func: fail
+---- Func: test_pure
+---- Func: test_pure_global_setting
+---- Func: test_nout
+---- Func: test_kwargs
+-------- Func: mysum
+---- Func: test_custom_delayed
+---- Func: test_array_delayed
+---- Func: test_array_bag_delayed
+---- Func: test_delayed_picklable
+---- Func: test_delayed_compute_forward_kwargs
+---- Func: test_delayed_method_descriptor
+---- Func: test_delayed_callable
+---- Func: test_delayed_name_on_call
+---- Func: test_callable_obj
+-------- Class: Foo
+------------ Func: __init__
+------------ Func: __call__
+---- Func: test_name_consistent_across_instances
+---- Func: test_sensitive_to_partials
+---- Func: test_delayed_name
+-------- Func: myfunc
+---- Func: test_finalize_name
+-------- Func: key
+---- Func: test_keys_from_array
+---- Func: test_delayed_decorator_on_method
+-------- Class: A
+------------ Func: __init__
+------------ Func: addmethod
+------------ Func: addclass
+------------ Func: addstatic
+---- Func: test_attribute_of_attribute
+---- Func: test_check_meta_flag
+---- Func: modlevel_eager
+---- Func: modlevel_delayed1
+---- Func: modlevel_delayed2
+---- Func: test_pickle
+---- Func: test_cloudpickle
+
+dask/dask/tests/test_config.py
+
+---- Func: test_canonical_name
+---- Func: test_update
+---- Func: test_merge
+---- Func: test_collect_yaml_paths
+---- Func: test_collect_yaml_dir
+---- Func: no_read_permissions
+---- Func: test_collect_yaml_permission_errors
+---- Func: test_env
+---- Func: test_collect
+---- Func: test_collect_env_none
+---- Func: test_get
+---- Func: test_ensure_file
+---- Func: test_set
+---- Func: test_set_kwargs
+---- Func: test_set_nested
+---- Func: test_set_hard_to_copyables
+---- Func: test_ensure_file_directory
+---- Func: test_ensure_file_defaults_to_DASK_CONFIG_directory
+---- Func: test_rename
+---- Func: test_refresh
+---- Func: test_expand_environment_variables
+---- Func: test_env_var_canonical_name
+---- Func: test_get_set_canonical_name
+---- Func: test_get_set_roundtrip
+---- Func: test_merge_None_to_dict
+---- Func: test_core_file
+
+dask/dask/tests/test_multiprocessing.py
+
+---- Func: unrelated_function_global
+---- Func: my_small_function_global
+---- Func: test_pickle_globals
+---- Func: test_pickle_locals
+-------- Func: unrelated_function_local
+-------- Func: my_small_function_local
+---- Func: bad
+---- Func: test_errors_propagate
+---- Func: test_remote_exception
+---- Func: test_lambda_with_cloudpickle
+---- Func: test_lambda_without_cloudpickle
+---- Func: lambda_result
+---- Func: test_lambda_results_with_cloudpickle
+---- Func: test_lambda_results_without_cloudpickle
+---- Class: NotUnpickleable
+-------- Func: __getstate__
+-------- Func: __setstate__
+---- Func: test_unpicklable_args_generate_errors
+---- Func: test_reuse_pool
+---- Func: test_dumps_loads
+---- Func: test_fuse_doesnt_clobber_intermediates
+---- Func: test_optimize_graph_false
+---- Func: test_random_seeds
+-------- Func: f
+---- Func: check_for_pytest
+---- Func: test_custom_context_used_python3_posix
+---- Func: test_get_context_using_python3_posix
+---- Func: test_custom_context_ignored_elsewhere
+---- Func: test_get_context_always_default
+
+dask/dask/tests/test_cache.py
+
+---- Func: inc
+---- Func: test_cache
+---- Func: test_cache_with_number
+---- Func: test_cache_correctness
+---- Func: f
+---- Func: test_prefer_cheap_dependent
+
+dask/dask/tests/test_optimization.py
+
+---- Func: double
+---- Func: test_cull
+---- Func: fuse2
+---- Func: with_deps
+---- Func: test_fuse
+---- Func: test_fuse_keys
+---- Func: test_inline
+---- Func: test_inline_functions
+---- Func: test_inline_ignores_curries_and_partials
+---- Func: test_inline_functions_non_hashable
+-------- Class: NonHashableCallable
+------------ Func: __call__
+------------ Func: __hash__
+---- Func: test_inline_doesnt_shrink_fast_functions_at_top
+---- Func: test_inline_traverses_lists
+---- Func: test_inline_functions_protects_output_keys
+---- Func: test_functions_of
+---- Func: test_inline_cull_dependencies
+---- Func: test_fuse_reductions_single_input
+-------- Func: f
+---- Func: test_fuse_stressed
+-------- Func: f
+---- Func: test_fuse_reductions_multiple_input
+-------- Func: f
+---- Func: func_with_kwargs
+---- Func: test_SubgraphCallable
+---- Func: test_fuse_subgraphs
+---- Func: test_fuse_subgraphs_linear_chains_of_duplicate_deps
+---- Func: test_dont_fuse_numpy_arrays
+
+dask/dask/tests/__init__.py
+
+
+dask/dask/tests/test_system.py
+
+---- Func: test_cpu_count
+---- Func: test_cpu_count_cgroups
+-------- Func: mycpu_count
+-------- Class: MyProcess
+------------ Func: cpu_affinity
+-------- Func: myopen
+
+dask/dask/tests/test_distributed.py
+
+---- Func: test_can_import_client
+---- Func: test_persist
+---- Func: test_persist_nested
+---- Func: test_futures_to_delayed_dataframe
+---- Func: test_futures_to_delayed_bag
+---- Func: test_futures_to_delayed_array
+---- Func: test_local_get_with_distributed_active
+---- Func: test_to_hdf_distributed
+---- Func: test_to_hdf_scheduler_distributed
+---- Func: test_serializable_groupby_agg
+---- Func: test_futures_in_graph
+---- Func: test_zarr_distributed_roundtrip
+---- Func: test_zarr_in_memory_distributed_err
+---- Func: test_scheduler_equals_client
+---- Func: test_local_scheduler
+
+dask/dask/tests/test_datasets.py
+
+---- Func: test_mimesis
+---- Func: test_full_dataset
+---- Func: test_no_mimesis
+---- Func: test_deterministic
+
+dask/dask/bytes/_compatibility.py
+
+
+dask/dask/bytes/core.py
+
+---- Func: read_bytes
+---- Func: read_block_from_file
+
+dask/dask/bytes/utils.py
+
+---- Func: zip_compress
+
+dask/dask/bytes/__init__.py
+
+
+dask/dask/bytes/tests/test_local.py
+
+---- Func: to_uri
+---- Func: test_urlpath_inference_strips_protocol
+---- Func: test_urlpath_inference_errors
+---- Func: test_urlpath_expand_read
+---- Func: test_recursive_glob_expand
+---- Func: test_urlpath_expand_write
+---- Func: test_read_bytes
+---- Func: test_read_bytes_sample_delimiter
+---- Func: test_parse_sample_bytes
+---- Func: test_read_bytes_no_sample
+---- Func: test_read_bytes_blocksize_none
+---- Func: test_read_bytes_blocksize_types
+---- Func: test_read_bytes_blocksize_float_errs
+---- Func: test_read_bytes_include_path
+---- Func: test_with_urls
+---- Func: test_with_paths
+---- Func: test_read_bytes_block
+---- Func: test_read_bytes_delimited
+---- Func: test_compression
+---- Func: test_open_files
+---- Func: test_open_files_text_mode
+---- Func: test_open_files_compression
+---- Func: test_bad_compression
+---- Func: test_not_found
+---- Func: test_names
+---- Func: test_open_files_write
+---- Func: test_pickability_of_lazy_files
+---- Func: test_py2_local_bytes
+---- Func: test_abs_paths
+---- Func: test_get_pyarrow_filesystem
+
+dask/dask/bytes/tests/test_bytes_utils.py
+
+---- Func: test_read_block
+---- Func: test_seek_delimiter_endline
+---- Func: test_infer_storage_options
+---- Func: test_infer_storage_options_c
+---- Func: test_stringify_path
+-------- Class: CustomFSPath
+------------ Func: __init__
+------------ Func: __fspath__
+
+dask/dask/bytes/tests/test_compression.py
+
+---- Func: test_files
+
+dask/dask/bytes/tests/test_hdfs.py
+
+---- Func: hdfs
+---- Func: test_read_bytes
+---- Func: test_read_bytes_URL
+---- Func: test_read_bytes_big_file
+---- Func: test_deterministic_key_names
+---- Func: test_open_files_write
+---- Func: test_read_csv
+---- Func: test_read_text
+---- Func: test_read_text_unicode
+---- Func: test_parquet_pyarrow
+---- Func: test_glob
+---- Func: test_distributed
+
+dask/dask/bytes/tests/test_s3.py
+
+---- Func: ensure_safe_environment_variables
+---- Func: s3
+---- Func: s3_context
+---- Func: s3_with_yellow_tripdata
+---- Func: test_get_s3
+---- Func: test_open_files_write
+---- Func: test_read_bytes
+---- Func: test_read_bytes_sample_delimiter
+---- Func: test_read_bytes_non_existing_glob
+---- Func: test_read_bytes_blocksize_none
+---- Func: test_read_bytes_blocksize_on_large_data
+---- Func: test_read_bytes_block
+---- Func: test_read_bytes_delimited
+---- Func: test_compression
+---- Func: test_open_files
+---- Func: test_modification_time_read_bytes
+---- Func: test_parquet
+---- Func: test_parquet_wstoragepars
+---- Func: test_get_pyarrow_fs_s3
+
+dask/dask/bytes/tests/__init__.py
+
+
+dask/dask/bytes/tests/test_http.py
+
+---- Func: dir_server
+---- Func: test_simple
+---- Func: test_loc
+---- Func: test_fetch_range_with_headers
+---- Func: test_ops
+---- Func: test_ops_blocksize
+---- Func: test_errors
+---- Func: test_files
+---- Func: test_open_glob
+---- Func: test_parquet
+---- Func: test_bag
+---- Func: test_read_csv
+
+dask/dask/bag/text.py
+
+---- Func: read_text
+---- Func: file_to_blocks
+---- Func: decode
+
+dask/dask/bag/avro.py
+
+---- Func: read_long
+---- Func: read_bytes
+---- Func: read_header
+---- Func: open_head
+---- Func: read_avro
+---- Func: read_chunk
+---- Func: read_file
+---- Func: to_avro
+---- Func: _verify_schema
+---- Func: _write_avro_part
+
+dask/dask/bag/chunk.py
+
+---- Func: barrier
+---- Func: getitem
+---- Func: foldby_combine2
+---- Func: groupby_tasks_group_hash
+---- Func: var_chunk
+---- Func: var_aggregate
+
+dask/dask/bag/core.py
+
+---- Func: lazify_task
+---- Func: lazify
+---- Func: inline_singleton_lists
+---- Func: optimize
+---- Func: _to_textfiles_chunk
+---- Func: to_textfiles
+---- Func: finalize
+---- Func: finalize_item
+---- Class: StringAccessor
+-------- Func: __init__
+-------- Func: __dir__
+-------- Func: _strmap
+-------- Func: __getattr__
+-------- Func: match
+---- Func: robust_wraps
+-------- Func: _
+---- Class: Item
+-------- Func: __init__
+-------- Func: __dask_graph__
+-------- Func: __dask_keys__
+-------- Func: __dask_tokenize__
+-------- Func: __dask_postcompute__
+-------- Func: __dask_postpersist__
+-------- Func: from_delayed
+-------- Func: _args
+-------- Func: __getstate__
+-------- Func: __setstate__
+-------- Func: apply
+-------- Func: to_delayed
+---- Class: Bag
+-------- Func: __init__
+-------- Func: __dask_graph__
+-------- Func: __dask_keys__
+-------- Func: __dask_layers__
+-------- Func: __dask_tokenize__
+-------- Func: __dask_postcompute__
+-------- Func: __dask_postpersist__
+-------- Func: __str__
+-------- Func: map
+-------- Func: starmap
+-------- Func: _args
+-------- Func: __getstate__
+-------- Func: __setstate__
+-------- Func: filter
+-------- Func: random_sample
+-------- Func: remove
+-------- Func: map_partitions
+-------- Func: pluck
+-------- Func: unzip
+-------- Func: to_textfiles
+-------- Func: to_avro
+-------- Func: fold
+-------- Func: frequencies
+-------- Func: topk
+-------- Func: distinct
+-------- Func: reduction
+-------- Func: sum
+-------- Func: max
+-------- Func: min
+-------- Func: any
+-------- Func: all
+-------- Func: count
+-------- Func: mean
+------------ Func: mean_chunk
+------------ Func: mean_aggregate
+-------- Func: var
+-------- Func: std
+-------- Func: join
+-------- Func: product
+-------- Func: foldby
+-------- Func: take
+-------- Func: flatten
+-------- Func: __iter__
+-------- Func: groupby
+-------- Func: to_dataframe
+-------- Func: to_delayed
+-------- Func: repartition
+-------- Func: accumulate
+---- Func: accumulate_part
+---- Func: partition
+---- Func: collect
+---- Func: from_sequence
+---- Func: from_url
+---- Func: dictitems
+---- Func: concat
+---- Func: reify
+---- Func: from_delayed
+---- Func: chunk_distinct
+---- Func: merge_distinct
+---- Func: merge_frequencies
+---- Func: bag_range
+---- Func: bag_zip
+---- Func: map_chunk
+---- Class: _MapChunk
+-------- Func: __init__
+-------- Func: __next__
+-------- Func: check_all_iterators_consumed
+---- Func: starmap_chunk
+---- Func: unpack_scalar_dask_kwargs
+---- Func: bag_map
+-------- Func: build_iters
+---- Func: map_partitions
+-------- Func: build_args
+-------- Func: build_bag_kwargs
+---- Func: _reduce
+---- Func: make_group
+-------- Func: h
+---- Func: groupby_tasks
+---- Func: groupby_disk
+---- Func: empty_safe_apply
+---- Func: empty_safe_aggregate
+---- Func: safe_take
+---- Func: random_sample
+---- Func: random_state_data_python
+---- Func: split
+---- Func: to_dataframe
+
+dask/dask/bag/utils.py
+
+---- Func: assert_eq
+
+dask/dask/bag/__init__.py
+
+
+dask/dask/bag/tests/test_avro.py
+
+---- Func: test_onefile_oneblock
+---- Func: test_twofile_oneblock
+---- Func: test_twofile_multiblock
+---- Func: test_roundtrip_simple
+---- Func: test_roundtrip
+---- Func: test_invalid_schema
+
+dask/dask/bag/tests/test_bag.py
+
+---- Func: iseven
+---- Func: isodd
+---- Func: test_Bag
+---- Func: test_keys
+---- Func: test_bag_map
+-------- Func: myadd
+---- Func: test_map_method
+-------- Func: myadd
+---- Func: test_starmap
+-------- Func: myadd
+---- Func: test_filter
+---- Func: test_remove
+---- Func: test_iter
+---- Func: test_repr
+---- Func: test_pluck
+---- Func: test_pluck_with_default
+---- Func: test_unzip
+---- Func: test_fold
+-------- Func: binop
+---- Func: test_fold_bag
+-------- Func: binop
+---- Func: test_distinct
+---- Func: test_distinct_with_key
+---- Func: test_frequencies
+---- Func: test_frequencies_sorted
+---- Func: test_topk
+---- Func: test_topk_with_non_callable_key
+---- Func: test_topk_with_multiarg_lambda
+---- Func: test_lambdas
+---- Func: test_reductions
+---- Func: test_reduction_names
+---- Func: test_tree_reductions
+---- Func: test_aggregation
+---- Func: test_non_splittable_reductions
+---- Func: test_std
+---- Func: test_var
+---- Func: test_join
+---- Func: test_foldby
+---- Func: test_foldby_tree_reduction
+---- Func: test_map_partitions
+---- Func: test_map_partitions_args_kwargs
+-------- Func: maximum
+---- Func: test_random_sample_size
+---- Func: test_random_sample_prob_range
+---- Func: test_random_sample_repeated_computation
+---- Func: test_random_sample_different_definitions
+---- Func: test_random_sample_random_state
+---- Func: test_lazify_task
+---- Func: test_lazify
+---- Func: test_inline_singleton_lists
+---- Func: test_take
+---- Func: test_take_npartitions
+---- Func: test_take_npartitions_warn
+---- Func: test_map_is_lazy
+---- Func: test_can_use_dict_to_make_concrete
+---- Func: test_from_url
+---- Func: test_read_text
+---- Func: test_read_text_large
+---- Func: test_read_text_encoding
+---- Func: test_read_text_large_gzip
+---- Func: test_from_s3
+---- Func: test_from_sequence
+---- Func: test_from_long_sequence
+---- Func: test_from_empty_sequence
+---- Func: test_product
+---- Func: test_partition_collect
+---- Func: test_groupby
+---- Func: test_groupby_with_indexer
+---- Func: test_groupby_with_npartitions_changed
+---- Func: test_concat
+---- Func: test_flatten
+---- Func: test_concat_after_map
+---- Func: test_args
+---- Func: test_to_dataframe
+-------- Func: check_parts
+---- Func: test_to_textfiles
+---- Func: test_to_textfiles_name_function_preserves_order
+---- Func: test_to_textfiles_name_function_warn
+---- Func: test_to_textfiles_encoding
+---- Func: test_to_textfiles_inputs
+---- Func: test_to_textfiles_endlines
+---- Func: test_string_namespace
+---- Func: test_string_namespace_with_unicode
+---- Func: test_str_empty_split
+---- Func: test_map_with_iterator_function
+-------- Func: f
+---- Func: test_ensure_compute_output_is_concrete
+---- Class: BagOfDicts
+-------- Func: get
+-------- Func: set
+------------ Func: setter
+---- Func: test_bag_class_extend
+---- Func: test_gh715
+---- Func: test_bag_compute_forward_kwargs
+---- Func: test_to_delayed
+---- Func: test_to_delayed_optimize_graph
+---- Func: test_from_delayed
+---- Func: test_from_delayed_iterator
+-------- Func: lazy_records
+---- Func: test_range
+---- Func: test_zip
+---- Func: test_repartition
+---- Func: test_repartition_names
+---- Func: test_accumulate
+---- Func: test_groupby_tasks
+---- Func: test_groupby_tasks_names
+---- Func: test_groupby_tasks_2
+---- Func: test_groupby_tasks_3
+---- Func: test_to_textfiles_empty_partitions
+---- Func: test_reduction_empty
+---- Func: test_reduction_empty_aggregate
+---- Class: StrictReal
+-------- Func: __eq__
+-------- Func: __ne__
+---- Func: test_reduction_with_non_comparable_objects
+---- Func: test_reduction_with_sparse_matrices
+-------- Func: sp_reduce
+---- Func: test_empty
+---- Func: test_bag_picklable
+---- Func: test_msgpack_unicode
+---- Func: test_bag_with_single_callable
+---- Func: test_optimize_fuse_keys
+---- Func: test_reductions_are_lazy
+-------- Func: part
+-------- Func: func
+---- Func: test_repeated_groupby
+---- Func: test_temporary_directory
+---- Func: test_empty_bag
+---- Func: test_bag_paths
+---- Func: test_map_partitions_arg
+-------- Func: append_str
+---- Func: test_map_keynames
+---- Func: test_map_releases_element_references_as_soon_as_possible
+-------- Class: C
+------------ Func: __init__
+-------- Func: f_create
+-------- Func: f_drop
+
+dask/dask/bag/tests/test_text.py
+
+---- Func: test_read_text
+---- Func: test_files_per_partition
+---- Func: test_errors
+
+dask/dask/bag/tests/__init__.py
+
+
+dask/dask/dataframe/hyperloglog.py
+
+---- Func: compute_first_bit
+---- Func: compute_hll_array
+---- Func: reduce_state
+---- Func: estimate_count
+
+dask/dask/dataframe/multi.py
+
+---- Func: align_partitions
+---- Func: _maybe_align_partitions
+---- Func: require
+---- Func: merge_chunk
+---- Func: merge_indexed_dataframes
+---- Func: hash_join
+---- Func: single_partition_join
+---- Func: warn_dtype_mismatch
+---- Func: merge
+---- Func: fix_overlap
+-------- Func: body
+-------- Func: overlap
+---- Func: most_recent_tail
+---- Func: most_recent_tail_summary
+---- Func: compute_tails
+---- Func: most_recent_head
+---- Func: most_recent_head_summary
+---- Func: compute_heads
+---- Func: pair_partitions
+---- Func: merge_asof_padded
+---- Func: get_unsorted_columns
+---- Func: concat_and_unsort
+---- Func: _concat_compat
+---- Func: merge_asof_indexed
+---- Func: merge_asof
+---- Func: concat_and_check
+---- Func: concat_unindexed_dataframes
+---- Func: concat_indexed_dataframes
+---- Func: stack_partitions
+---- Func: concat
+
+dask/dask/dataframe/methods.py
+
+---- Func: loc
+---- Func: iloc
+---- Func: try_loc
+---- Func: boundary_slice
+---- Func: index_count
+---- Func: mean_aggregate
+---- Func: wrap_var_reduction
+---- Func: var_mixed_concat
+---- Func: describe_aggregate
+---- Func: describe_numeric_aggregate
+---- Func: describe_nonnumeric_aggregate
+---- Func: _cum_aggregate_apply
+---- Func: cummin_aggregate
+---- Func: cummax_aggregate
+---- Func: assign
+---- Func: unique
+---- Func: value_counts_combine
+---- Func: value_counts_aggregate
+---- Func: nbytes
+---- Func: size
+---- Func: values
+---- Func: sample
+---- Func: drop_columns
+---- Func: fillna_check
+---- Func: pivot_agg
+---- Func: pivot_sum
+---- Func: pivot_count
+---- Func: concat
+---- Func: concat_pandas
+---- Func: assign_index
+
+dask/dask/dataframe/categorical.py
+
+---- Func: _categorize_block
+---- Func: _get_categories
+---- Func: _get_categories_agg
+---- Func: categorize
+---- Class: CategoricalAccessor
+-------- Func: known
+-------- Func: as_known
+-------- Func: as_unknown
+-------- Func: ordered
+-------- Func: categories
+-------- Func: codes
+-------- Func: remove_unused_categories
+
+dask/dask/dataframe/accessor.py
+
+---- Func: maybe_wrap_pandas
+---- Class: Accessor
+-------- Func: __init__
+-------- Func: _delegate_property
+-------- Func: _delegate_method
+-------- Func: _property_map
+-------- Func: _function_map
+-------- Func: _delegates
+-------- Func: __dir__
+-------- Func: __getattr__
+---- Class: DatetimeAccessor
+---- Class: StringAccessor
+-------- Func: split
+-------- Func: cat
+-------- Func: extractall
+-------- Func: __getitem__
+---- Func: str_extractall
+---- Func: str_get
+---- Func: str_cat
+
+dask/dask/dataframe/reshape.py
+
+---- Func: get_dummies
+---- Func: pivot_table
+---- Func: melt
+
+dask/dask/dataframe/backends.py
+
+---- Func: _register_cudf
+
+dask/dask/dataframe/core.py
+
+---- Func: _concat
+---- Func: finalize
+---- Class: Scalar
+-------- Func: __init__
+-------- Func: __dask_graph__
+-------- Func: __dask_keys__
+-------- Func: __dask_tokenize__
+-------- Func: __dask_layers__
+-------- Func: __dask_postcompute__
+-------- Func: __dask_postpersist__
+-------- Func: _meta_nonempty
+-------- Func: dtype
+-------- Func: __dir__
+-------- Func: divisions
+-------- Func: __repr__
+-------- Func: __array__
+-------- Func: _args
+-------- Func: __getstate__
+-------- Func: __setstate__
+-------- Func: __bool__
+-------- Func: key
+-------- Func: _get_unary_operator
+------------ Func: f
+-------- Func: _get_binary_operator
+-------- Func: to_delayed
+---- Func: _scalar_binary
+---- Class: _Frame
+-------- Func: __init__
+-------- Func: __dask_graph__
+-------- Func: __dask_keys__
+-------- Func: __dask_layers__
+-------- Func: __dask_tokenize__
+-------- Func: __dask_postcompute__
+-------- Func: __dask_postpersist__
+-------- Func: _constructor
+-------- Func: npartitions
+-------- Func: size
+-------- Func: _meta_nonempty
+-------- Func: _args
+-------- Func: __getstate__
+-------- Func: __setstate__
+-------- Func: copy
+-------- Func: __array__
+-------- Func: __array_wrap__
+-------- Func: __array_ufunc__
+-------- Func: _elemwise
+-------- Func: _repr_data
+-------- Func: _repr_divisions
+-------- Func: __repr__
+-------- Func: index
+-------- Func: index
+-------- Func: reset_index
+-------- Func: known_divisions
+-------- Func: clear_divisions
+-------- Func: get_partition
+-------- Func: drop_duplicates
+-------- Func: __len__
+-------- Func: __bool__
+-------- Func: _scalarfunc
+------------ Func: wrapper
+-------- Func: __float__
+-------- Func: __int__
+-------- Func: __complex__
+-------- Func: map_partitions
+-------- Func: map_overlap
+-------- Func: reduction
+-------- Func: pipe
+-------- Func: random_split
+-------- Func: head
+-------- Func: _head
+-------- Func: tail
+-------- Func: loc
+-------- Func: _partitions
+-------- Func: partitions
+-------- Func: repartition
+-------- Func: fillna
+-------- Func: ffill
+-------- Func: bfill
+-------- Func: sample
+-------- Func: replace
+-------- Func: to_dask_array
+-------- Func: to_hdf
+-------- Func: to_csv
+-------- Func: to_json
+-------- Func: to_delayed
+-------- Func: _get_unary_operator
+-------- Func: _get_binary_operator
+-------- Func: rolling
+-------- Func: diff
+-------- Func: shift
+-------- Func: _reduction_agg
+-------- Func: abs
+-------- Func: all
+-------- Func: any
+-------- Func: sum
+-------- Func: prod
+-------- Func: max
+-------- Func: min
+-------- Func: idxmax
+-------- Func: idxmin
+-------- Func: count
+-------- Func: mean
+-------- Func: var
+-------- Func: _var_numeric
+-------- Func: _var_timedeltas
+-------- Func: _var_mixed
+-------- Func: _var_1d
+-------- Func: std
+-------- Func: sem
+-------- Func: quantile
+-------- Func: describe
+-------- Func: _describe_1d
+-------- Func: _describe_numeric
+-------- Func: _describe_nonnumeric_1d
+-------- Func: _cum_agg
+-------- Func: cumsum
+-------- Func: cumprod
+-------- Func: cummax
+-------- Func: cummin
+-------- Func: where
+-------- Func: mask
+-------- Func: notnull
+-------- Func: isnull
+-------- Func: isna
+-------- Func: isin
+-------- Func: astype
+-------- Func: append
+-------- Func: align
+-------- Func: combine
+-------- Func: combine_first
+-------- Func: _bind_operator_method
+-------- Func: resample
+-------- Func: first
+-------- Func: last
+-------- Func: nunique_approx
+-------- Func: values
+-------- Func: _validate_chunks
+-------- Func: _is_index_level_reference
+-------- Func: _contains_index_name
+---- Func: _raise_if_object_series
+---- Class: Series
+-------- Func: __array_wrap__
+-------- Func: name
+-------- Func: name
+-------- Func: ndim
+-------- Func: shape
+-------- Func: dtype
+-------- Func: dt
+-------- Func: cat
+-------- Func: str
+-------- Func: __dir__
+-------- Func: nbytes
+-------- Func: _repr_data
+-------- Func: __repr__
+-------- Func: rename
+-------- Func: round
+-------- Func: to_timestamp
+-------- Func: quantile
+-------- Func: _repartition_quantiles
+-------- Func: __getitem__
+-------- Func: _get_numeric_data
+-------- Func: iteritems
+-------- Func: __iter__
+-------- Func: _validate_axis
+-------- Func: groupby
+-------- Func: count
+-------- Func: explode
+-------- Func: unique
+-------- Func: nunique
+-------- Func: value_counts
+-------- Func: nlargest
+-------- Func: nsmallest
+-------- Func: isin
+-------- Func: map
+-------- Func: dropna
+-------- Func: between
+-------- Func: clip
+-------- Func: clip_lower
+-------- Func: clip_upper
+-------- Func: align
+-------- Func: combine
+-------- Func: squeeze
+-------- Func: combine_first
+-------- Func: to_bag
+-------- Func: to_frame
+-------- Func: to_string
+-------- Func: _bind_operator_method
+------------ Func: meth
+-------- Func: _bind_comparison_method
+------------ Func: meth
+-------- Func: apply
+-------- Func: cov
+-------- Func: corr
+-------- Func: autocorr
+-------- Func: memory_usage
+-------- Func: __divmod__
+-------- Func: __rdivmod__
+---- Class: Index
+-------- Func: __getattr__
+-------- Func: __dir__
+-------- Func: index
+-------- Func: __array_wrap__
+-------- Func: head
+-------- Func: max
+-------- Func: min
+-------- Func: count
+-------- Func: shift
+-------- Func: to_series
+-------- Func: to_frame
+---- Class: DataFrame
+-------- Func: __array_wrap__
+-------- Func: columns
+-------- Func: columns
+-------- Func: iloc
+-------- Func: __len__
+-------- Func: __getitem__
+-------- Func: __setitem__
+-------- Func: __delitem__
+-------- Func: __setattr__
+-------- Func: __getattr__
+-------- Func: __dir__
+-------- Func: __iter__
+-------- Func: _ipython_key_completions_
+-------- Func: ndim
+-------- Func: shape
+-------- Func: dtypes
+-------- Func: get_dtype_counts
+-------- Func: get_ftype_counts
+-------- Func: select_dtypes
+-------- Func: set_index
+-------- Func: pop
+-------- Func: nlargest
+-------- Func: nsmallest
+-------- Func: groupby
+-------- Func: categorize
+-------- Func: assign
+-------- Func: rename
+-------- Func: query
+-------- Func: eval
+-------- Func: dropna
+-------- Func: clip
+-------- Func: clip_lower
+-------- Func: clip_upper
+-------- Func: squeeze
+-------- Func: to_timestamp
+-------- Func: explode
+-------- Func: to_bag
+-------- Func: to_parquet
+-------- Func: to_string
+-------- Func: _get_numeric_data
+-------- Func: _validate_axis
+-------- Func: drop
+-------- Func: merge
+-------- Func: join
+-------- Func: append
+-------- Func: iterrows
+-------- Func: itertuples
+-------- Func: _bind_operator_method
+------------ Func: meth
+-------- Func: _bind_comparison_method
+------------ Func: meth
+-------- Func: apply
+-------- Func: applymap
+-------- Func: round
+-------- Func: cov
+-------- Func: corr
+-------- Func: info
+-------- Func: memory_usage
+-------- Func: pivot_table
+-------- Func: melt
+-------- Func: to_records
+-------- Func: to_html
+-------- Func: _repr_data
+-------- Func: _repr_html_
+-------- Func: _select_columns_or_index
+-------- Func: _is_column_label_reference
+---- Func: is_broadcastable
+---- Func: elemwise
+---- Func: handle_out
+---- Func: _maybe_from_pandas
+---- Func: hash_shard
+---- Func: split_evenly
+---- Func: split_out_on_index
+---- Func: split_out_on_cols
+---- Func: apply_concat_apply
+---- Func: _extract_meta
+---- Func: _emulate
+---- Func: map_partitions
+---- Func: apply_and_enforce
+---- Func: _rename
+---- Func: _rename_dask
+---- Func: quantile
+---- Func: cov_corr
+---- Func: cov_corr_chunk
+---- Func: cov_corr_combine
+---- Func: cov_corr_agg
+---- Func: pd_split
+---- Func: _take_last
+-------- Func: _last_valid
+---- Func: check_divisions
+---- Func: repartition_divisions
+-------- Func: _is_single_last_div
+---- Func: repartition_freq
+---- Func: repartition_size
+---- Func: total_mem_usage
+---- Func: iter_chunks
+---- Func: repartition_npartitions
+---- Func: _repartition_from_boundaries
+---- Func: _split_partitions
+---- Func: repartition
+---- Func: _reduction_chunk
+---- Func: _reduction_combine
+---- Func: _reduction_aggregate
+---- Func: idxmaxmin_chunk
+---- Func: idxmaxmin_row
+---- Func: idxmaxmin_combine
+---- Func: idxmaxmin_agg
+---- Func: safe_head
+---- Func: maybe_shift_divisions
+---- Func: to_datetime
+---- Func: to_timedelta
+---- Func: isna
+---- Func: _repr_data_series
+---- Func: get_parallel_type_series
+---- Func: get_parallel_type_dataframe
+---- Func: get_parallel_type_index
+---- Func: get_parallel_type_object
+---- Func: get_parallel_type_frame
+---- Func: parallel_types
+---- Func: has_parallel_type
+---- Func: new_dd_object
+---- Func: partitionwise_graph
+---- Func: meta_warning
+---- Func: prefix_reduction
+---- Func: suffix_reduction
+---- Func: mapseries
+---- Func: mapseries_combine
+---- Func: series_map
+
+dask/dask/dataframe/indexing.py
+
+---- Class: _IndexerBase
+-------- Func: __init__
+-------- Func: _name
+-------- Func: _meta_indexer
+-------- Func: _make_meta
+---- Class: _iLocIndexer
+-------- Func: _meta_indexer
+-------- Func: __getitem__
+-------- Func: _iloc
+---- Class: _LocIndexer
+-------- Func: _meta_indexer
+-------- Func: __getitem__
+-------- Func: _loc
+-------- Func: _maybe_partial_time_string
+-------- Func: _loc_series
+-------- Func: _loc_array
+-------- Func: _loc_list
+-------- Func: _loc_element
+-------- Func: _get_partitions
+-------- Func: _coerce_loc_index
+-------- Func: _loc_slice
+---- Func: _partition_of_index_value
+---- Func: _partitions_of_index_values
+---- Func: _coerce_loc_index
+---- Func: _maybe_partial_time_string
+
+dask/dask/dataframe/_compat.py
+
+---- Func: assert_categorical_equal
+---- Func: assert_numpy_array_equal
+---- Func: makeDataFrame
+---- Func: makeTimeDataFrame
+---- Func: makeTimeSeries
+---- Func: makeDateIndex
+---- Func: makeTimedeltaIndex
+---- Func: makeMissingDataframe
+---- Func: makeMixedDataFrame
+
+dask/dask/dataframe/extensions.py
+
+
+dask/dask/dataframe/utils.py
+
+---- Func: is_integer_na_dtype
+---- Func: shard_df_on_index
+---- Func: insert_meta_param_description
+---- Func: raise_on_meta_error
+---- Func: has_known_categories
+---- Func: strip_unknown_categories
+---- Func: clear_known_categories
+---- Func: _empty_series
+---- Func: make_meta_pandas
+---- Func: make_meta_index
+---- Func: make_meta_object
+---- Func: meta_nonempty_object
+---- Func: meta_nonempty_dataframe
+---- Func: _nonempty_index
+---- Func: hash_object_pandas
+---- Func: group_split_pandas
+---- Func: _scalar_from_dtype
+---- Func: _
+---- Func: _
+---- Func: _nonempty_scalar
+---- Func: _nonempty_series
+---- Func: is_dataframe_like
+---- Func: is_series_like
+---- Func: is_index_like
+---- Func: check_meta
+-------- Func: equal_dtypes
+---- Func: check_matching_columns
+---- Func: index_summary
+---- Func: _check_dask
+---- Func: _maybe_sort
+---- Func: assert_eq
+---- Func: assert_dask_graph
+---- Func: assert_divisions
+-------- Func: index
+---- Func: assert_sane_keynames
+---- Func: assert_dask_dtypes
+-------- Func: eq_dtypes
+---- Func: assert_max_deps
+---- Func: valid_divisions
+---- Func: drop_by_shallow_copy
+
+dask/dask/dataframe/rolling.py
+
+---- Func: overlap_chunk
+---- Func: map_overlap
+---- Func: _head_timedelta
+---- Func: _tail_timedelta
+---- Func: pandas_rolling_method
+---- Class: Rolling
+-------- Func: __init__
+-------- Func: _rolling_kwargs
+-------- Func: _has_single_partition
+-------- Func: _call_method
+-------- Func: count
+-------- Func: cov
+-------- Func: sum
+-------- Func: mean
+-------- Func: median
+-------- Func: min
+-------- Func: max
+-------- Func: std
+-------- Func: var
+-------- Func: skew
+-------- Func: kurt
+-------- Func: quantile
+-------- Func: apply
+-------- Func: aggregate
+-------- Func: __repr__
+------------ Func: order
+
+dask/dask/dataframe/optimize.py
+
+---- Func: optimize
+---- Func: optimize_read_parquet_getitem
+
+dask/dask/dataframe/__init__.py
+
+
+dask/dask/dataframe/partitionquantiles.py
+
+---- Func: sample_percentiles
+---- Func: tree_width
+---- Func: tree_groups
+---- Func: create_merge_tree
+---- Func: percentiles_to_weights
+---- Func: merge_and_compress_summaries
+---- Func: process_val_weights
+---- Func: percentiles_summary
+---- Func: dtype_info
+---- Func: partition_quantiles
+
+dask/dask/dataframe/shuffle.py
+
+---- Func: set_index
+---- Func: remove_nans
+---- Func: set_partition
+---- Func: shuffle
+---- Func: rearrange_by_divisions
+---- Func: rearrange_by_column
+---- Class: maybe_buffered_partd
+-------- Func: __init__
+-------- Func: __reduce__
+-------- Func: __call__
+---- Func: rearrange_by_column_disk
+---- Func: rearrange_by_column_tasks
+---- Func: partitioning_index
+---- Func: barrier
+---- Func: collect
+---- Func: set_partitions_pre
+---- Func: shuffle_group_2
+---- Func: shuffle_group_get
+---- Func: shuffle_group
+---- Func: shuffle_group_3
+---- Func: set_index_post_scalar
+---- Func: set_index_post_series
+---- Func: set_sorted_index
+---- Func: compute_divisions
+
+dask/dask/dataframe/_accessor.py
+
+---- Class: CachedAccessor
+-------- Func: __init__
+-------- Func: __get__
+---- Func: _register_accessor
+-------- Func: decorator
+---- Func: register_dataframe_accessor
+---- Func: register_series_accessor
+---- Func: register_index_accessor
+
+dask/dask/dataframe/groupby.py
+
+---- Func: _determine_levels
+---- Func: _normalize_index
+---- Func: _maybe_slice
+---- Func: _is_aligned
+---- Func: _groupby_raise_unaligned
+---- Func: _groupby_slice_apply
+---- Func: _groupby_slice_transform
+---- Func: _groupby_get_group
+---- Class: Aggregation
+-------- Func: __init__
+---- Func: _groupby_aggregate
+---- Func: _apply_chunk
+---- Func: _var_chunk
+---- Func: _var_combine
+---- Func: _var_agg
+---- Func: _cov_combine
+---- Func: _cov_finalizer
+---- Func: _mul_cols
+---- Func: _cov_chunk
+---- Func: _cov_agg
+---- Func: _nunique_df_chunk
+---- Func: _drop_duplicates_rename
+---- Func: _nunique_df_combine
+---- Func: _nunique_df_aggregate
+---- Func: _nunique_series_chunk
+---- Func: _make_agg_id
+---- Func: _normalize_spec
+---- Func: _build_agg_args
+---- Func: _build_agg_args_single
+---- Func: _build_agg_args_simple
+---- Func: _build_agg_args_var
+---- Func: _build_agg_args_std
+---- Func: _build_agg_args_mean
+---- Func: _build_agg_args_custom
+---- Func: _groupby_apply_funcs
+---- Func: _compute_sum_of_squares
+---- Func: _agg_finalize
+---- Func: _apply_func_to_column
+---- Func: _apply_func_to_columns
+---- Func: _finalize_mean
+---- Func: _finalize_var
+---- Func: _finalize_std
+---- Func: _cum_agg_aligned
+---- Func: _cum_agg_filled
+---- Func: _cumcount_aggregate
+---- Class: _GroupBy
+-------- Func: __init__
+-------- Func: _meta_nonempty
+-------- Func: _aca_agg
+-------- Func: _cum_agg
+-------- Func: _shuffle
+-------- Func: cumsum
+-------- Func: cumprod
+-------- Func: cumcount
+-------- Func: sum
+-------- Func: prod
+-------- Func: min
+-------- Func: max
+-------- Func: idxmin
+-------- Func: idxmax
+-------- Func: count
+-------- Func: mean
+-------- Func: size
+-------- Func: var
+-------- Func: std
+-------- Func: corr
+-------- Func: cov
+-------- Func: first
+-------- Func: last
+-------- Func: get_group
+-------- Func: aggregate
+-------- Func: apply
+-------- Func: transform
+---- Class: DataFrameGroupBy
+-------- Func: __getitem__
+-------- Func: __dir__
+-------- Func: __getattr__
+-------- Func: aggregate
+-------- Func: agg
+---- Class: SeriesGroupBy
+-------- Func: __init__
+-------- Func: nunique
+-------- Func: aggregate
+-------- Func: agg
+-------- Func: value_counts
+-------- Func: unique
+---- Func: _unique_aggregate
+---- Func: _value_counts_aggregate
+
+dask/dask/dataframe/tseries/resample.py
+
+---- Func: getnanos
+---- Func: _resample_series
+---- Func: _resample_bin_and_out_divs
+---- Class: Resampler
+-------- Func: __init__
+-------- Func: _agg
+-------- Func: agg
+-------- Func: count
+-------- Func: first
+-------- Func: last
+-------- Func: mean
+-------- Func: min
+-------- Func: median
+-------- Func: max
+-------- Func: nunique
+-------- Func: ohlc
+-------- Func: prod
+-------- Func: sem
+-------- Func: std
+-------- Func: size
+-------- Func: sum
+-------- Func: var
+-------- Func: quantile
+
+dask/dask/dataframe/tseries/__init__.py
+
+
+dask/dask/dataframe/tseries/tests/__init__.py
+
+
+dask/dask/dataframe/tseries/tests/test_resample.py
+
+---- Func: resample
+---- Func: test_series_resample
+---- Func: test_resample_agg
+---- Func: test_resample_agg_passes_kwargs
+-------- Func: foo
+---- Func: test_series_resample_not_implemented
+---- Func: test_unknown_divisions_error
+---- Func: test_resample_index_name
+---- Func: test_common_aggs
+
+dask/dask/dataframe/io/csv.py
+
+---- Func: pandas_read_text
+---- Func: coerce_dtypes
+---- Func: text_blocks_to_pandas
+---- Func: auto_blocksize
+---- Func: read_pandas
+---- Func: make_reader
+-------- Func: read
+---- Func: _write_csv
+---- Func: to_csv
+
+dask/dask/dataframe/io/json.py
+
+---- Func: to_json
+---- Func: write_json_partition
+---- Func: read_json
+---- Func: read_json_chunk
+---- Func: read_json_file
+
+dask/dask/dataframe/io/hdf.py
+
+---- Func: _pd_to_hdf
+---- Func: to_hdf
+---- Func: _read_single_hdf
+-------- Func: get_keys_stops_divisions
+-------- Func: one_path_one_key
+------------ Func: update
+---- Func: _pd_read_hdf
+---- Func: read_hdf
+
+dask/dask/dataframe/io/io.py
+
+---- Func: _meta_from_array
+---- Func: from_array
+---- Func: from_pandas
+---- Func: from_bcolz
+---- Func: dataframe_from_ctable
+---- Func: from_dask_array
+---- Func: _link
+---- Func: _df_to_bag
+---- Func: to_bag
+---- Func: to_records
+---- Func: from_delayed
+---- Func: sorted_division_locations
+
+dask/dask/dataframe/io/orc.py
+
+---- Func: _read_orc_stripe
+---- Func: read_orc
+
+dask/dask/dataframe/io/sql.py
+
+---- Func: read_sql_table
+---- Func: _read_sql_chunk
+
+dask/dask/dataframe/io/demo.py
+
+---- Func: make_float
+---- Func: make_int
+---- Func: make_string
+---- Func: make_categorical
+---- Func: make_timeseries_part
+---- Func: make_timeseries
+---- Func: generate_day
+---- Func: daily_stock
+
+dask/dask/dataframe/io/utils.py
+
+---- Func: _get_pyarrow_dtypes
+---- Func: _meta_from_dtypes
+
+dask/dask/dataframe/io/__init__.py
+
+
+dask/dask/dataframe/io/parquet/core.py
+
+---- Class: ParquetSubgraph
+-------- Func: __init__
+-------- Func: __repr__
+-------- Func: __getitem__
+-------- Func: __len__
+-------- Func: __iter__
+---- Func: read_parquet
+---- Func: read_parquet_part
+---- Func: to_parquet
+---- Func: get_engine
+---- Func: sorted_columns
+---- Func: apply_filters
+-------- Func: apply_conjunction
+---- Func: process_statistics
+---- Func: set_index_columns
+---- Func: aggregate_row_groups
+
+dask/dask/dataframe/io/parquet/utils.py
+
+---- Class: Engine
+-------- Func: read_metadata
+-------- Func: read_partition
+-------- Func: initialize_write
+-------- Func: write_partition
+-------- Func: write_metadata
+---- Func: _parse_pandas_metadata
+---- Func: _normalize_index_columns
+---- Func: _analyze_paths
+-------- Func: _join_path
+------------ Func: _scrub
+
+dask/dask/dataframe/io/parquet/fastparquet.py
+
+---- Func: _paths_to_cats
+---- Func: _determine_pf_parts
+---- Class: FastParquetEngine
+-------- Func: read_metadata
+-------- Func: read_partition
+-------- Func: initialize_write
+-------- Func: write_partition
+-------- Func: write_metadata
+
+dask/dask/dataframe/io/parquet/__init__.py
+
+
+dask/dask/dataframe/io/parquet/arrow.py
+
+---- Func: _get_md_row_groups
+---- Func: _get_row_groups_per_piece
+---- Func: _determine_dataset_parts
+---- Class: ArrowEngine
+-------- Func: read_metadata
+-------- Func: read_partition
+-------- Func: initialize_write
+-------- Func: write_partition
+-------- Func: write_metadata
+
+dask/dask/dataframe/io/tests/test_sql.py
+
+---- Func: db
+---- Func: test_empty
+---- Func: test_empty_other_schema
+---- Func: test_needs_rational
+---- Func: test_simple
+---- Func: test_npartitions
+---- Func: test_divisions
+---- Func: test_division_or_partition
+---- Func: test_range
+---- Func: test_datetimes
+---- Func: test_with_func
+---- Func: test_no_nameless_index
+---- Func: test_select_from_select
+---- Func: test_extra_connection_engine_keywords
+---- Func: test_no_character_index_without_divisions
+
+dask/dask/dataframe/io/tests/test_json.py
+
+---- Func: test_read_json_basic
+---- Func: test_read_json_fkeyword
+-------- Func: _my_json_reader
+---- Func: test_read_json_meta
+---- Func: test_write_json_basic
+---- Func: test_read_json_error
+---- Func: test_read_chunked
+---- Func: test_json_compressed
+---- Func: test_read_json_inferred_compression
+
+dask/dask/dataframe/io/tests/test_hdf.py
+
+---- Func: test_to_hdf
+---- Func: test_to_hdf_multiple_nodes
+---- Func: test_to_hdf_multiple_files
+---- Func: test_to_hdf_modes_multiple_nodes
+---- Func: test_to_hdf_modes_multiple_files
+---- Func: test_to_hdf_link_optimizations
+---- Func: test_to_hdf_lock_delays
+-------- Func: delayed_nop
+---- Func: test_to_hdf_exceptions
+---- Func: test_to_hdf_schedulers
+---- Func: test_to_hdf_kwargs
+---- Func: test_to_fmt_warns
+---- Func: test_read_hdf
+---- Func: test_read_hdf_multiply_open
+---- Func: test_read_hdf_multiple
+---- Func: test_read_hdf_start_stop_values
+---- Func: test_hdf_globbing
+---- Func: test_hdf_file_list
+---- Func: test_read_hdf_pattern_pathlike
+---- Func: test_to_hdf_path_pathlike
+---- Func: test_read_hdf_doesnt_segfault
+---- Func: test_hdf_filenames
+
+dask/dask/dataframe/io/tests/test_demo.py
+
+---- Func: test_make_timeseries
+---- Func: test_make_timeseries_no_args
+---- Func: test_no_overlaps
+---- Func: test_daily_stock
+---- Func: test_make_timeseries_keywords
+---- Func: test_make_timeseries_fancy_keywords
+
+dask/dask/dataframe/io/tests/test_csv.py
+
+---- Func: normalize_text
+---- Func: parse_filename
+---- Func: test_pandas_read_text
+---- Func: test_pandas_read_text_kwargs
+---- Func: test_pandas_read_text_dtype_coercion
+---- Func: test_pandas_read_text_with_header
+---- Func: test_text_blocks_to_pandas_simple
+---- Func: test_text_blocks_to_pandas_kwargs
+---- Func: test_text_blocks_to_pandas_blocked
+---- Func: test_skiprows
+---- Func: test_skiprows_as_list
+---- Func: test_enforce_dtypes
+---- Func: test_enforce_columns
+---- Func: test_read_csv
+---- Func: test_read_csv_large_skiprows
+---- Func: test_read_csv_skiprows_only_in_first_partition
+---- Func: test_read_csv_files
+---- Func: test_read_csv_files_list
+---- Func: test_read_csv_include_path_column
+---- Func: test_read_csv_include_path_column_as_str
+---- Func: test_read_csv_include_path_column_with_duplicate_name
+---- Func: test_read_csv_include_path_column_is_dtype_category
+---- Func: test_read_csv_index
+---- Func: test_read_csv_skiprows_range
+---- Func: test_usecols
+---- Func: test_string_blocksize
+---- Func: test_skipinitialspace
+---- Func: test_consistent_dtypes
+---- Func: test_consistent_dtypes_2
+---- Func: test_categorical_dtypes
+---- Func: test_categorical_known
+---- Func: test_compression_multiple_files
+---- Func: test_empty_csv_file
+---- Func: test_read_csv_no_sample
+---- Func: test_read_csv_sensitive_to_enforce
+---- Func: test_read_csv_compression
+---- Func: test_warn_non_seekable_files
+---- Func: test_windows_line_terminator
+---- Func: test_header_None
+---- Func: test_auto_blocksize
+---- Func: test_auto_blocksize_max64mb
+---- Func: test_auto_blocksize_csv
+---- Func: test_head_partial_line_fix
+---- Func: test_read_csv_raises_on_no_files
+---- Func: test_read_csv_has_deterministic_name
+---- Func: test_multiple_read_csv_has_deterministic_name
+---- Func: test_csv_with_integer_names
+---- Func: test_read_csv_of_modified_file_has_different_name
+---- Func: test_late_dtypes
+---- Func: test_assume_missing
+---- Func: test_index_col
+---- Func: test_read_csv_with_datetime_index_partitions_one
+---- Func: test_read_csv_with_datetime_index_partitions_n
+---- Func: test_encoding_gh601
+---- Func: test_read_csv_header_issue_823
+---- Func: test_none_usecols
+---- Func: test_parse_dates_multi_column
+---- Func: test_read_csv_sep
+---- Func: test_read_csv_slash_r
+---- Func: test_read_csv_singleton_dtype
+---- Func: test_robust_column_mismatch
+---- Func: test_error_if_sample_is_too_small
+---- Func: test_read_csv_names_not_none
+---- Func: test_to_csv
+---- Func: test_to_csv_multiple_files_cornercases
+---- Func: test_to_single_csv
+---- Func: test_to_single_csv_with_name_function
+---- Func: test_to_single_csv_with_header_first_partition_only
+---- Func: test_to_single_csv_gzip
+---- Func: test_to_csv_gzip
+---- Func: test_to_csv_simple
+---- Func: test_to_csv_series
+---- Func: test_to_csv_with_get
+-------- Func: my_get
+---- Func: test_to_csv_paths
+---- Func: test_to_csv_header_empty_dataframe
+---- Func: test_to_csv_header
+---- Func: test_to_csv_line_ending
+
+dask/dask/dataframe/io/tests/test_orc.py
+
+---- Func: test_orc_with_backend
+---- Func: orc_files
+---- Func: test_orc_single
+---- Func: test_orc_multiple
+
+dask/dask/dataframe/io/tests/test_parquet.py
+
+---- Func: check_fastparquet
+---- Func: check_pyarrow
+---- Func: check_engine
+---- Func: engine
+---- Func: write_read_engines
+---- Func: test_local
+---- Func: test_empty
+---- Func: test_simple
+---- Func: test_delayed_no_metadata
+---- Func: test_read_glob
+---- Func: test_read_list
+---- Func: test_columns_auto_index
+---- Func: test_columns_index
+---- Func: test_nonsense_column
+---- Func: test_columns_no_index
+---- Func: test_gather_statistics_no_index
+---- Func: test_columns_index_with_multi_index
+---- Func: test_no_index
+---- Func: test_read_series
+---- Func: test_names
+-------- Func: read
+---- Func: test_roundtrip_from_pandas
+---- Func: test_categorical
+---- Func: test_append
+---- Func: test_append_create
+---- Func: test_append_with_partition
+---- Func: test_partition_on_cats
+---- Func: test_partition_on_cats_2
+---- Func: test_append_wo_index
+---- Func: test_append_overlapping_divisions
+---- Func: test_append_different_columns
+---- Func: test_ordering
+---- Func: test_read_parquet_custom_columns
+---- Func: test_roundtrip
+---- Func: test_categories
+---- Func: test_empty_partition
+---- Func: test_timestamp_index
+---- Func: test_to_parquet_default_writes_nulls
+---- Func: test_to_parquet_pyarrow_w_inconsistent_schema_by_partition_fails_by_default
+---- Func: test_to_parquet_pyarrow_w_inconsistent_schema_by_partition_succeeds_w_manual_schema
+---- Func: test_partition_on
+---- Func: test_partition_on_string
+---- Func: test_filters_categorical
+---- Func: test_filters
+---- Func: test_filters_v0
+---- Func: test_divisions_read_with_filters
+---- Func: test_divisions_are_known_read_with_filters
+---- Func: test_read_from_fastparquet_parquetfile
+---- Func: test_to_parquet_lazy
+---- Func: test_timestamp96
+---- Func: test_drill_scheme
+---- Func: test_parquet_select_cats
+---- Func: test_columns_name
+---- Func: check_compression
+---- Func: test_writing_parquet_with_compression
+---- Func: pandas_metadata
+---- Func: test_parse_pandas_metadata
+---- Func: test_parse_pandas_metadata_null_index
+---- Func: test_read_no_metadata
+---- Func: test_parse_pandas_metadata_duplicate_index_columns
+---- Func: test_parse_pandas_metadata_column_with_index_name
+---- Func: test_writing_parquet_with_kwargs
+---- Func: test_writing_parquet_with_unknown_kwargs
+---- Func: test_select_partitioned_column
+---- Func: test_with_tz
+---- Func: test_arrow_partitioning
+---- Func: test_sorted_warnings
+---- Func: test_informative_error_messages
+---- Func: test_append_cat_fp
+---- Func: test_roundtrip_arrow
+---- Func: test_datasets_timeseries
+---- Func: test_pathlib_path
+---- Func: test_pyarrow_metadata_nthreads
+---- Func: test_categories_large
+---- Func: test_read_glob_nostats
+---- Func: test_read_dir_nometa
+---- Func: test_timeseries_nulls_in_schema
+---- Func: test_timeseries_nulls_in_schema_pyarrow
+---- Func: test_graph_size_pyarrow
+---- Func: test_getitem_optimization
+---- Func: test_getitem_optimization_empty
+---- Func: test_getitem_optimization_multi
+---- Func: test_subgraph_getitem
+---- Func: test_split_row_groups_pyarrow
+---- Func: test_optimize_getitem_and_nonblockwise
+---- Func: test_optimize_and_not
+---- Func: test_chunksize
+---- Func: test_roundtrip_pandas_chunksize
+---- Func: test_read_pandas_fastparquet_partitioned
+
+dask/dask/dataframe/io/tests/__init__.py
+
+
+dask/dask/dataframe/io/tests/test_io.py
+
+---- Func: test_meta_from_array
+---- Func: test_meta_from_1darray
+---- Func: test_meta_from_recarray
+---- Func: test_from_array
+---- Func: test_from_array_with_record_dtype
+---- Func: test_from_bcolz_multiple_threads
+-------- Func: check
+---- Func: test_from_bcolz
+---- Func: test_from_bcolz_no_lock
+---- Func: test_from_bcolz_filename
+---- Func: test_from_bcolz_column_order
+---- Func: test_from_pandas_dataframe
+---- Func: test_from_pandas_small
+---- Func: test_from_pandas_npartitions_is_accurate
+---- Func: test_from_pandas_series
+---- Func: test_from_pandas_non_sorted
+---- Func: test_from_pandas_single_row
+---- Func: test_from_pandas_with_datetime_index
+---- Func: test_DataFrame_from_dask_array
+---- Func: test_Series_from_dask_array
+---- Func: test_from_dask_array_index
+---- Func: test_from_dask_array_index_raises
+---- Func: test_from_dask_array_compat_numpy_array
+---- Func: test_from_dask_array_compat_numpy_array_1d
+---- Func: test_from_dask_array_struct_dtype
+---- Func: test_from_dask_array_unknown_chunks
+---- Func: test_to_bag
+---- Func: test_to_records
+---- Func: test_to_records_with_lengths
+---- Func: test_to_records_raises
+---- Func: test_from_delayed
+---- Func: test_from_delayed_misordered_meta
+---- Func: test_from_delayed_sorted
+---- Func: test_to_delayed
+---- Func: test_to_delayed_optimize_graph
+---- Func: test_from_dask_array_index_dtype
+
+dask/dask/dataframe/tests/test_hyperloglog.py
+
+---- Func: test_basic
+---- Func: test_split_every
+---- Func: test_larger_data
+
+dask/dask/dataframe/tests/test_categorical.py
+
+---- Func: test_concat_unions_categoricals
+---- Func: test_unknown_categoricals
+---- Func: test_is_categorical_dtype
+---- Func: test_categorize
+---- Func: test_categorize_index
+---- Func: test_categorical_set_index
+---- Func: test_categorical_set_index_npartitions_vs_ncategories
+---- Func: test_repartition_on_categoricals
+---- Func: test_categorical_accessor_presence
+---- Func: test_categorize_nan
+---- Func: get_cat
+---- Func: assert_array_index_eq
+---- Func: test_return_type_known_categories
+---- Class: TestCategoricalAccessor
+-------- Func: test_properties
+-------- Func: test_callable
+-------- Func: test_categorical_empty
+------------ Func: make_empty
+------------ Func: make_full
+-------- Func: test_unknown_categories
+-------- Func: test_categorical_string_ops
+-------- Func: test_categorical_non_string_raises
+
+dask/dask/dataframe/tests/test_dataframe.py
+
+---- Func: test_dataframe_doc
+---- Func: test_Dataframe
+---- Func: test_head_tail
+---- Func: test_head_npartitions
+---- Func: test_head_npartitions_warn
+---- Func: test_index_head
+---- Func: test_Series
+---- Func: test_Index
+---- Func: test_Scalar
+---- Func: test_scalar_raises
+---- Func: test_attributes
+---- Func: test_column_names
+---- Func: test_index_names
+---- Func: test_timezone_freq
+---- Func: test_rename_columns
+---- Func: test_rename_series
+---- Func: test_rename_series_method
+---- Func: test_rename_series_method_2
+---- Func: test_describe_numeric
+---- Func: test_describe
+---- Func: test_describe_empty
+---- Func: test_describe_empty_tdigest
+---- Func: test_describe_for_possibly_unsorted_q
+---- Func: test_cumulative
+---- Func: test_cumulative_empty_partitions
+---- Func: test_dropna
+---- Func: test_clip
+---- Func: test_squeeze
+---- Func: test_where_mask
+---- Func: test_map_partitions_multi_argument
+---- Func: test_map_partitions
+---- Func: test_map_partitions_type
+---- Func: test_map_partitions_names
+---- Func: test_map_partitions_column_info
+---- Func: test_map_partitions_method_names
+---- Func: test_map_partitions_propagates_index_metadata
+---- Func: test_map_partitions_keeps_kwargs_readable
+-------- Func: f
+---- Func: test_metadata_inference_single_partition_aligned_args
+-------- Func: check
+---- Func: test_drop_duplicates
+---- Func: test_drop_duplicates_subset
+---- Func: test_get_partition
+---- Func: test_ndim
+---- Func: test_dtype
+---- Func: test_value_counts
+---- Func: test_unique
+---- Func: test_isin
+---- Func: test_len
+---- Func: test_size
+---- Func: test_shape
+---- Func: test_nbytes
+---- Func: test_quantile
+---- Func: test_quantile_missing
+---- Func: test_empty_quantile
+---- Func: test_dataframe_quantile
+---- Func: test_quantile_for_possibly_unsorted_q
+---- Func: test_index
+---- Func: test_assign
+---- Func: test_assign_callable
+---- Func: test_assign_dtypes
+---- Func: test_map
+---- Func: test_concat
+---- Func: test_args
+---- Func: test_known_divisions
+---- Func: test_unknown_divisions
+---- Func: test_with_min_count
+---- Func: test_align
+---- Func: test_align_axis
+---- Func: test_combine
+---- Func: test_combine_first
+---- Func: test_dataframe_picklable
+---- Func: test_random_partitions
+---- Func: test_series_round
+---- Func: test_repartition
+-------- Func: _check_split_data
+---- Func: test_repartition_divisions
+---- Func: test_repartition_on_pandas_dataframe
+---- Func: test_repartition_npartitions
+---- Func: test_repartition_partition_size
+---- Func: test_iter_chunks
+---- Func: test_repartition_npartitions_same_limits
+---- Func: test_repartition_npartitions_numeric_edge_case
+---- Func: test_repartition_object_index
+---- Func: test_repartition_freq
+---- Func: test_repartition_freq_divisions
+---- Func: test_repartition_freq_errors
+---- Func: test_repartition_freq_month
+---- Func: test_repartition_input_errors
+---- Func: test_embarrassingly_parallel_operations
+---- Func: test_fillna
+---- Func: test_fillna_duplicate_index
+-------- Func: f
+---- Func: test_fillna_multi_dataframe
+---- Func: test_ffill_bfill
+---- Func: test_fillna_series_types
+---- Func: test_sample
+---- Func: test_sample_without_replacement
+---- Func: test_sample_raises
+---- Func: test_empty_max
+---- Func: test_query
+---- Func: test_eval
+---- Func: test_select_dtypes
+---- Func: test_deterministic_apply_concat_apply_names
+-------- Func: chunk
+-------- Func: agg
+---- Func: test_aca_meta_infer
+-------- Func: chunk
+-------- Func: agg
+---- Func: test_aca_split_every
+-------- Func: chunk
+-------- Func: combine
+-------- Func: agg
+---- Func: test_reduction_method
+-------- Func: sum_and_count
+---- Func: test_reduction_method_split_every
+-------- Func: chunk
+-------- Func: combine
+-------- Func: agg
+---- Func: test_pipe
+-------- Func: f
+---- Func: test_gh_517
+---- Func: test_drop_axis_1
+---- Func: test_gh580
+---- Func: test_rename_dict
+---- Func: test_rename_function
+---- Func: test_rename_index
+---- Func: test_to_timestamp
+---- Func: test_to_frame
+---- Func: test_to_dask_array_raises
+---- Func: test_to_dask_array_unknown
+---- Func: test_to_dask_array
+---- Func: test_apply
+---- Func: test_apply_warns
+---- Func: test_applymap
+---- Func: test_abs
+---- Func: test_round
+---- Func: test_cov
+---- Func: test_corr
+---- Func: test_corr_same_name
+---- Func: test_cov_corr_meta
+---- Func: test_cov_corr_stable
+---- Func: test_cov_corr_mixed
+---- Func: test_autocorr
+---- Func: test_apply_infer_columns
+-------- Func: return_df
+-------- Func: return_df2
+---- Func: test_index_time_properties
+---- Func: test_nlargest_nsmallest
+---- Func: test_reset_index
+---- Func: test_dataframe_compute_forward_kwargs
+---- Func: test_series_iteritems
+---- Func: test_series_iter
+---- Func: test_dataframe_iterrows
+---- Func: test_dataframe_itertuples
+---- Func: test_dataframe_itertuples_with_index_false
+---- Func: test_dataframe_itertuples_with_name_none
+---- Func: test_astype
+---- Func: test_astype_categoricals
+---- Func: test_astype_categoricals_known
+---- Func: test_groupby_callable
+-------- Func: iseven
+---- Func: test_methods_tokenize_differently
+---- Func: _assert_info
+---- Func: test_info
+---- Func: test_groupby_multilevel_info
+---- Func: test_categorize_info
+---- Func: test_gh_1301
+---- Func: test_timeseries_sorted
+---- Func: test_column_assignment
+---- Func: test_array_assignment
+---- Func: test_columns_assignment
+---- Func: test_attribute_assignment
+---- Func: test_setitem_triggering_realign
+---- Func: test_inplace_operators
+---- Func: test_idxmaxmin
+---- Func: test_idxmaxmin_empty_partitions
+---- Func: test_getitem_meta
+---- Func: test_getitem_multilevel
+---- Func: test_getitem_string_subclass
+-------- Class: string_subclass
+---- Func: test_getitem_column_types
+---- Func: test_ipython_completion
+---- Func: test_diff
+---- Func: test_shift
+---- Func: test_shift_with_freq_DatetimeIndex
+---- Func: test_shift_with_freq_PeriodIndex
+---- Func: test_shift_with_freq_TimedeltaIndex
+---- Func: test_shift_with_freq_errors
+---- Func: test_first_and_last
+---- Func: test_hash_split_unique
+---- Func: test_split_out_drop_duplicates
+---- Func: test_split_out_value_counts
+---- Func: test_values
+---- Func: test_copy
+---- Func: test_del
+---- Func: test_memory_usage
+---- Func: test_dataframe_reductions_arithmetic
+---- Func: test_datetime_loc_open_slicing
+---- Func: test_to_datetime
+---- Func: test_to_timedelta
+---- Func: test_isna
+---- Func: test_slice_on_filtered_boundary
+---- Func: test_boundary_slice_nonmonotonic
+---- Func: test_boundary_slice_empty
+---- Func: test_with_boundary
+---- Func: test_boundary_slice_same
+---- Func: test_better_errors_object_reductions
+---- Func: test_sample_empty_partitions
+-------- Func: make_df
+---- Func: test_coerce
+---- Func: test_bool
+---- Func: test_cumulative_multiple_columns
+---- Func: test_map_partition_array
+---- Func: test_map_partition_sparse
+-------- Func: f
+---- Func: test_mixed_dask_array_operations
+---- Func: test_mixed_dask_array_operations_errors
+---- Func: test_mixed_dask_array_multi_dimensional
+---- Func: test_meta_raises
+---- Func: test_dask_dataframe_holds_scipy_sparse_containers
+---- Func: test_map_partitions_delays_large_inputs
+---- Func: test_partitions_indexer
+---- Func: test_mod_eq
+---- Func: test_setitem
+---- Func: test_broadcast
+---- Func: test_scalar_with_array
+---- Func: test_has_parallel_type
+---- Func: test_meta_error_message
+---- Func: test_assign_index
+---- Func: test_index_divisions
+---- Func: test_replace
+---- Func: test_map_partitions_delays_lists
+---- Func: test_dtype_cast
+---- Func: test_series_map
+---- Func: test_dataframe_explode
+---- Func: test_series_explode
+---- Func: test_pop
+---- Func: test_simple_map_partitions
+---- Func: test_iter
+---- Func: test_dataframe_groupby_agg_empty_partitions
+
+dask/dask/dataframe/tests/test_multi.py
+
+---- Func: test_align_partitions
+-------- Func: _check
+---- Func: test_align_partitions_unknown_divisions
+---- Func: test__maybe_align_partitions
+---- Func: test_merge_indexed_dataframe_to_indexed_dataframe
+---- Func: list_eq
+---- Func: test_hash_join
+---- Func: test_sequential_joins
+---- Func: test_merge_asof_indexed
+---- Func: test_merge_asof_on_basic
+---- Func: test_merge_asof_on
+---- Func: test_merge_asof_indexed
+---- Func: test_merge_asof_on_by
+---- Func: test_merge_asof_on_by_tolerance
+---- Func: test_merge_asof_on_by_tolerance_no_exact_matches
+---- Func: test_merge_asof_unsorted_raises
+---- Func: test_indexed_concat
+---- Func: test_concat
+---- Func: test_concat_different_dtypes
+---- Func: test_merge_columns_dtypes
+---- Func: test_merge
+---- Func: test_merge_tasks_passes_through
+---- Func: test_merge_by_index_patterns
+-------- Func: pd_merge
+---- Func: test_join_by_index_patterns
+---- Func: test_merge_by_multiple_columns
+---- Func: test_melt
+---- Func: test_cheap_inner_merge_with_pandas_object
+---- Func: test_cheap_single_partition_merge
+---- Func: test_cheap_single_partition_merge_divisions
+---- Func: test_cheap_single_parition_merge_left_right
+---- Func: test_cheap_single_partition_merge_on_index
+---- Func: test_merge_maintains_columns
+---- Func: test_merge_index_without_divisions
+---- Func: test_half_indexed_dataframe_avoids_shuffle
+---- Func: test_errors_for_merge_on_frame_columns
+---- Func: test_concat_one_series
+---- Func: test_concat_unknown_divisions
+---- Func: test_concat_unknown_divisions_errors
+---- Func: test_concat2
+---- Func: test_concat3
+---- Func: test_concat4_interleave_partitions
+---- Func: test_concat5
+---- Func: test_concat_categorical
+-------- Func: check_and_return
+---- Func: test_concat_categorical_mixed_simple
+---- Func: test_concat_datetimeindex
+---- Func: test_append
+-------- Func: check_with_warning
+---- Func: test_append2
+---- Func: test_append_categorical
+---- Func: test_append_lose_divisions
+---- Func: test_singleton_divisions
+---- Func: test_repartition_repeated_divisions
+---- Func: test_multi_duplicate_divisions
+---- Func: test_merge_outer_empty
+---- Func: test_dtype_equality_warning
+---- Func: test_groupby_concat_cudf
+
+dask/dask/dataframe/tests/test_reshape.py
+
+---- Func: test_get_dummies
+---- Func: test_get_dummies_object
+---- Func: test_get_dummies_kwargs
+---- Func: test_get_dummies_sparse
+---- Func: test_get_dummies_sparse_mix
+---- Func: test_get_dummies_dtype
+---- Func: test_get_dummies_dtype_raises
+---- Func: test_get_dummies_errors
+---- Func: test_pivot_table
+---- Func: test_pivot_table_dtype
+---- Func: test_pivot_table_index_dtype
+---- Func: test_pivot_table_errors
+
+dask/dask/dataframe/tests/test_optimize_dataframe.py
+
+---- Func: test_fuse_ave_width
+---- Func: test_optimize_blockwise
+
+dask/dask/dataframe/tests/test_ufunc.py
+
+---- Func: test_ufunc
+---- Func: test_ufunc_array_wrap
+---- Func: test_ufunc_with_2args
+---- Func: test_clip
+---- Func: test_frame_ufunc_out
+---- Func: test_frame_2ufunc_out
+---- Func: test_mixed_types
+---- Func: test_2args_with_array
+---- Func: test_ufunc_with_reduction
+---- Func: test_ufunc_numpy_scalar_comparison
+
+dask/dask/dataframe/tests/test_rolling.py
+
+---- Func: shifted_sum
+---- Func: ts_shifted_sum
+---- Func: test_map_overlap
+---- Func: test_map_overlap_names
+---- Func: test_map_overlap_errors
+---- Func: test_map_overlap_provide_meta
+---- Func: mad
+---- Func: test_rolling_methods
+---- Func: test_rolling_cov
+---- Func: test_rolling_raw_pandas_lt_0230_raises
+---- Func: test_rolling_raises
+---- Func: test_rolling_names
+---- Func: test_rolling_axis
+---- Func: test_rolling_partition_size
+---- Func: test_rolling_repr
+---- Func: test_time_rolling_repr
+---- Func: test_time_rolling_constructor
+---- Func: test_time_rolling_methods
+---- Func: test_time_rolling_cov
+---- Func: test_time_rolling_large_window_fixed_chunks
+---- Func: test_time_rolling_large_window_variable_chunks
+---- Func: test_time_rolling
+---- Func: test_rolling_agg_aggregate
+
+dask/dask/dataframe/tests/test_extensions.py
+
+---- Func: _
+---- Func: _
+---- Func: test_register_extension_type
+---- Func: test_reduction
+---- Func: test_scalar
+
+dask/dask/dataframe/tests/test_groupby.py
+
+---- Func: agg_func
+---- Func: test_groupby_internal_repr_xfail
+---- Func: test_groupby_internal_repr
+---- Func: test_groupby_error
+---- Func: test_full_groupby
+-------- Func: func
+---- Func: test_full_groupby_apply_multiarg
+-------- Func: func
+---- Func: test_full_groupby_multilevel
+-------- Func: func
+---- Func: test_groupby_dir
+---- Func: test_groupby_on_index
+-------- Func: func
+-------- Func: func2
+-------- Func: func3
+---- Func: test_groupby_multilevel_getitem
+---- Func: test_groupby_multilevel_agg
+---- Func: test_groupby_get_group
+---- Func: test_dataframe_groupby_nunique
+---- Func: test_dataframe_groupby_nunique_across_group_same_value
+---- Func: test_series_groupby_propagates_names
+---- Func: test_series_groupby
+---- Func: test_series_groupby_errors
+---- Func: test_groupby_index_array
+---- Func: test_groupby_set_index
+---- Func: test_split_apply_combine_on_series
+---- Func: test_groupby_reduction_split
+-------- Func: call
+---- Func: test_apply_or_transform_shuffle
+---- Func: test_apply_or_transform_shuffle_multilevel
+---- Func: test_numeric_column_names
+---- Func: test_groupby_apply_tasks
+---- Func: test_groupby_multiprocessing
+---- Func: test_groupby_normalize_index
+---- Func: test_aggregate__examples
+---- Func: test_series_aggregate__examples
+---- Func: test_aggregate__single_element_groups
+---- Func: test_aggregate_build_agg_args__reuse_of_intermediates
+---- Func: test_aggregate__dask
+---- Func: test_dataframe_aggregations_multilevel
+-------- Func: call
+---- Func: test_series_aggregations_multilevel
+-------- Func: call
+---- Func: test_groupby_meta_content
+---- Func: test_groupy_non_aligned_index
+---- Func: test_groupy_series_wrong_grouper
+---- Func: test_hash_groupby_aggregate
+---- Func: test_split_out_multi_column_groupby
+---- Func: test_groupby_split_out_num
+---- Func: test_groupby_not_supported
+---- Func: test_groupby_numeric_column
+---- Func: test_cumulative
+---- Func: test_cumulative_axis1
+---- Func: test_groupby_unaligned_index
+-------- Func: add1
+---- Func: test_groupby_string_label
+---- Func: test_groupby_dataframe_cum_caching
+---- Func: test_groupby_series_cum_caching
+---- Func: test_groupby_slice_agg_reduces
+---- Func: test_groupby_agg_grouper_single
+---- Func: test_groupby_agg_grouper_multiple
+---- Func: test_groupby_column_and_index_agg_funcs
+-------- Func: call
+---- Func: test_groupby_column_and_index_apply
+---- Func: test_dataframe_groupby_agg_custom_sum
+---- Func: test_series_groupby_agg_custom_mean
+---- Func: test_groupby_agg_custom__name_clash_with_internal_same_column
+---- Func: test_groupby_agg_custom__name_clash_with_internal_different_column
+---- Func: test_groupby_agg_custom__mode
+-------- Func: agg_mode
+------------ Func: impl
+---- Func: test_groupby_select_column_agg
+---- Func: test_std_object_dtype
+---- Func: test_std_columns_int
+---- Func: test_timeseries
+---- Func: test_with_min_count
+---- Func: test_groupby_group_keys
+---- Func: test_groupby_cov
+---- Func: test_df_groupby_idxmin
+---- Func: test_df_groupby_idxmin_skipna
+---- Func: test_df_groupby_idxmax
+---- Func: test_df_groupby_idxmax_skipna
+---- Func: test_series_groupby_idxmin
+---- Func: test_series_groupby_idxmin_skipna
+---- Func: test_series_groupby_idxmax
+---- Func: test_series_groupby_idxmax_skipna
+---- Func: test_groupby_unique
+---- Func: test_groupby_value_counts
+---- Func: test_groupby_transform_funcs
+---- Func: test_groupby_transform_ufunc_partitioning
+---- Func: test_groupby_aggregate_categoricals
+---- Func: test_groupby_dropna_pandas
+---- Func: test_groupby_dropna_cudf
+---- Func: test_rounding_negative_var
+---- Func: test_groupby_split_out_multiindex
+---- Func: test_groupby_large_ints_exception
+
+dask/dask/dataframe/tests/test_indexing.py
+
+---- Func: test_loc
+---- Func: test_loc_non_informative_index
+---- Func: test_loc_with_text_dates
+---- Func: test_loc_with_series
+---- Func: test_loc_with_array
+---- Func: test_loc_with_array_different_partition
+---- Func: test_loc_with_series_different_partition
+---- Func: test_loc2d
+---- Func: test_loc2d_some_missing
+---- Func: test_loc2d_with_known_divisions
+---- Func: test_loc2d_with_unknown_divisions
+---- Func: test_loc2d_duplicated_columns
+---- Func: test_getitem
+---- Func: test_getitem_slice
+---- Func: test_getitem_integer_slice
+---- Func: test_loc_on_numpy_datetimes
+---- Func: test_loc_on_pandas_datetimes
+---- Func: test_loc_datetime_no_freq
+---- Func: test_coerce_loc_index
+---- Func: test_loc_timestamp_str
+---- Func: test_getitem_timestamp_str
+---- Func: test_loc_period_str
+---- Func: test_getitem_period_str
+---- Func: test_to_series
+---- Func: test_to_frame
+---- Func: test_to_frame_name
+---- Func: test_iloc
+---- Func: test_iloc_series
+---- Func: test_iloc_raises
+
+dask/dask/dataframe/tests/test_hashing.py
+
+---- Func: test_hash_pandas_object
+---- Func: test_categorical_consistency
+---- Func: test_object_missing_values
+---- Func: test_hash_object_dispatch
+
+dask/dask/dataframe/tests/test_format.py
+
+---- Func: test_repr
+---- Func: test_repr_meta_mutation
+---- Func: test_dataframe_format
+---- Func: test_dataframe_format_with_index
+---- Func: test_dataframe_format_unknown_divisions
+---- Func: test_dataframe_format_long
+---- Func: test_series_format
+---- Func: test_series_format_long
+---- Func: test_index_format
+---- Func: test_categorical_format
+---- Func: test_duplicate_columns_repr
+---- Func: test_empty_repr
+
+dask/dask/dataframe/tests/test_accessors.py
+
+---- Func: ensure_removed
+---- Class: MyAccessor
+-------- Func: __init__
+-------- Func: prop
+-------- Func: method
+---- Func: test_register
+---- Func: test_accessor_works
+---- Func: df_ddf
+---- Func: test_dt_accessor
+---- Func: test_dt_accessor_not_available
+---- Func: test_str_accessor
+---- Func: test_str_accessor_not_available
+---- Func: test_str_accessor_getitem
+---- Func: test_str_accessor_extractall
+---- Func: test_str_accessor_cat
+---- Func: test_str_accessor_noexpand
+---- Func: test_str_accessor_expand
+---- Func: test_str_accessor_expand_more_columns
+
+dask/dask/dataframe/tests/test_merge_column_and_index.py
+
+---- Func: df_left
+---- Func: df_right
+---- Func: ddf_left
+---- Func: ddf_left_unknown
+---- Func: ddf_left_single
+---- Func: ddf_right
+---- Func: ddf_right_unknown
+---- Func: ddf_right_single
+---- Func: how
+---- Func: on
+---- Func: test_merge_known_to_known
+---- Func: test_merge_known_to_single
+---- Func: test_merge_single_to_known
+---- Func: test_merge_known_to_unknown
+---- Func: test_merge_unknown_to_known
+---- Func: test_merge_unknown_to_unknown
+
+dask/dask/dataframe/tests/__init__.py
+
+
+dask/dask/dataframe/tests/test_shuffle.py
+
+---- Func: test_shuffle
+---- Func: test_default_partitions
+---- Func: test_shuffle_npartitions_task
+---- Func: test_index_with_non_series
+---- Func: test_index_with_dataframe
+---- Func: test_shuffle_from_one_partition_to_one_other
+---- Func: test_shuffle_empty_partitions
+---- Func: test_partitioning_index
+---- Func: test_partitioning_index_categorical_on_values
+---- Func: test_set_index_tasks
+---- Func: test_set_index_self_index
+---- Func: test_set_index_names
+---- Func: test_set_index_tasks_2
+---- Func: test_set_index_tasks_3
+---- Func: test_shuffle_sort
+---- Func: test_rearrange
+---- Func: test_rearrange_by_column_with_narrow_divisions
+---- Func: test_maybe_buffered_partd
+---- Func: test_set_index_with_explicit_divisions
+-------- Func: throw
+---- Func: test_set_index_divisions_2
+---- Func: test_set_index_divisions_compute
+---- Func: test_set_index_divisions_sorted
+-------- Func: throw
+---- Func: test_set_index_consistent_divisions
+---- Func: _set_index
+---- Func: test_set_index_reduces_partitions_small
+---- Func: make_part
+---- Func: test_set_index_reduces_partitions_large
+---- Func: test_set_index_doesnt_increase_partitions
+---- Func: test_set_index_detects_sorted_data
+---- Func: test_set_index_sorts
+---- Func: test_set_index
+---- Func: test_set_index_interpolate
+---- Func: test_set_index_interpolate_int
+---- Func: test_set_index_timezone
+---- Func: test_set_index_drop
+---- Func: test_set_index_raises_error_on_bad_input
+---- Func: test_set_index_sorted_true
+---- Func: test_set_index_sorted_single_partition
+---- Func: test_set_index_sorted_min_max_same
+---- Func: test_set_index_empty_partition
+---- Func: test_set_index_on_empty
+---- Func: test_set_index_categorical
+---- Func: test_compute_divisions
+---- Func: test_temporary_directory
+---- Func: test_empty_partitions
+---- Func: test_remove_nans
+---- Func: test_gh_2730
+---- Func: test_set_index_does_not_repeat_work_due_to_optimizations
+-------- Func: increment
+-------- Func: make_part
+---- Func: test_set_index_errors_with_inplace_kwarg
+---- Func: test_set_index_timestamp
+---- Func: test_disk_shuffle_with_compression_option
+---- Func: test_disk_shuffle_with_unknown_compression
+---- Func: test_disk_shuffle_check_actual_compression
+-------- Func: generate_raw_partd_file
+
+dask/dask/dataframe/tests/test_utils_dataframe.py
+
+---- Func: test_shard_df_on_index
+---- Func: test_make_meta
+---- Func: test_meta_nonempty
+---- Func: test_meta_duplicated
+---- Func: test_meta_nonempty_empty_categories
+---- Func: test_meta_nonempty_index
+---- Func: test_meta_nonempty_uint64index
+---- Func: test_meta_nonempty_scalar
+---- Func: test_raise_on_meta_error
+---- Func: test_check_meta
+---- Func: test_check_meta_typename
+---- Func: test_is_dataframe_like
+---- Func: test_apply_and_enforce_message
+-------- Func: func
+
+dask/dask/dataframe/tests/test_arithmetics_reduction.py
+
+---- Func: test_arithmetics
+---- Func: test_deterministic_arithmetic_names
+---- Func: test_arithmetics_different_index
+---- Func: check_series_arithmetics
+---- Func: check_frame_arithmetics
+---- Func: test_scalar_arithmetics
+---- Func: test_scalar_arithmetics_with_dask_instances
+---- Func: test_frame_series_arithmetic_methods
+---- Func: test_reductions
+---- Func: test_reductions_timedelta
+---- Func: test_reductions_out
+---- Func: test_allany
+---- Func: test_deterministic_reduction_names
+---- Func: test_reduction_series_invalid_axis
+---- Func: test_reductions_non_numeric_dtypes
+-------- Func: check_raises
+---- Func: test_reductions_frame
+---- Func: test_reductions_frame_dtypes
+---- Func: test_reductions_frame_nan
+---- Func: test_series_comparison_nan
+---- Func: test_sum_intna
+---- Func: test_divmod
+---- Func: test_moment
+
+dask/docs/source/conf.py
+
+---- Func: copy_legacy_redirects
+---- Func: setup
+
+dask/docs/source/scripts/scheduling.py
+
+---- Func: noop
+---- Func: trivial
+---- Func: crosstalk
+---- Func: dense
